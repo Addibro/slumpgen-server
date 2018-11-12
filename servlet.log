@@ -1,0 +1,7 @@
+Running servlet...
+[Winstone 2018/11/12 15:23:14] - No webapp lib folder found - /Users/andreas/Documents/Web/Servlets/servlet-test/src/www/WEB-INF/lib
+[Winstone 2018/11/12 15:23:14] - Winstone Servlet Engine v0.9.10 running: controlPort=disabled
+[Winstone 2018/11/12 15:23:14] - HTTP Listener started: port=8080
+[Winstone 2018/11/12 15:23:14] - AJP13 Listener started: port=8009
+[Winstone 2018/11/12 15:23:19] - Winstone shutdown successfully
+[Winstone 2018/11/12 15:23:19] - Control thread shutdown successfully
