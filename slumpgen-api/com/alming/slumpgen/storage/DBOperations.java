@@ -1,6 +1,11 @@
 package com.alming.slumpgen.storage;
 
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.DriverManager;
+import java.sql.Connection;
+import java.sql.Statement;
+import java.sql.SQLException;
 
 public class DBOperations {
     public static class CharactersColumnIds {
@@ -50,8 +55,33 @@ public class DBOperations {
         public static final int NAME = 1;
     }
 
+    // location of db
+    private static final String DB_LOCATION = "jdbc:sqlite:www/WEB-INF/db/characters.db";
+    
+    // try connection
+    private static Connection connection;
+
+    // statically instantiate the connection (like a mini singleton)
+    static {
+        try {
+            connection = DriverManager.getConnection(DB_LOCATION);
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+            // TODO throw exception to app in a very nice way
+        }
+    }
+
+
     public static ResultSet getCharacterResultSet() {
-        return null;
+        try {
+            Statement statement = connection.createStatement();
+            StringBuilder sql = new StringBuilder("SELECT * FROM characters;");
+            return statement.executeQuery(sql.toString());
+        } catch (SQLException e) {
+            System.err.println(e.getMessage());
+            //TODO: handle exception to app in a very nice way
+            return null;
+        }
     }
 
 }

@@ -12,15 +12,15 @@ public class TestFakeCharacters {
     }
 
     private static void testGetFakeRPGCharacters() {
-        List<RPGCharacter> characters = new FakeGetCharacters().getAllCharacters();
+        List<? extends RPGCharacter> characters = new FakeGetCharacters().getAllCharacters();
         String expected = "[Andreas, Kuken David]";
         String result = characters.toString();
 
         System.out.println("EXPECTED: " + expected + ", Received: " + result);
     }
 
-    // private static void testGetFakeFBLCharacters() {
-    //     List<FBLCharacter> characters = new FakeGetCharacters().getAllCharacters();
-    //     System.out.println(characters);
-    // }
+    private static void testGetFakeFBLCharacters() {
+        List<? extends RPGCharacter> characters = new FakeGetCharacters().getAllCharacters();
+        System.out.println(characters);
+    }
 }

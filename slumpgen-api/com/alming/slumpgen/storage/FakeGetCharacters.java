@@ -10,7 +10,7 @@ public class FakeGetCharacters implements GetCharacters {
     private List<RPGCharacter> characters;
 
     @Override
-    public List<RPGCharacter> getAllCharacters() {
+    public List<? extends RPGCharacter> getAllCharacters() {
         if (characters == null) {
             // getFakeRPGCharacters();
             fillFakeRPGCharacters();
@@ -24,8 +24,8 @@ public class FakeGetCharacters implements GetCharacters {
         characters.add(new RPGCharacter("Kuken David"));
     }
 
-    private void fillFakeFBLCharacters() {
-        characters = new ArrayList<>();
-        characters.add(new FBLCharacter("Andreas", "THE BOSS", "human", "pro", new HashMap<>(), "1", new HashMap<>(), new HashMap<>(), new HashMap<>(), new ArrayList<>()));
-    }
+    // private void fillFakeFBLCharacter() {
+    //     characters = new ArrayList<>();
+    //     characters.add(new FBLCharacter("Andreas", "THE BOSS", "human", "pro", new HashMap<String>(), "1", new HashMap<String>(), new HashMap<String>(), new HashMap<String>(), new ArrayList<String>()));
+    // }
 }

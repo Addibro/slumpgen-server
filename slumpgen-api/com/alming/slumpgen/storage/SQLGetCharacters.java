@@ -24,7 +24,10 @@ public class SQLGetCharacters implements GetCharacters {
         ResultSet rs = DBOperations.getCharacterResultSet();
         try {
             while (rs.next()) {
-
+                String name     = rs.getString(DBOperations.CharactersColumnIds.NAME);
+                String nickname = rs.getString(DBOperations.CharactersColumnIds.NICKNAME);
+                String kin      = rs.getString(DBOperations.CharactersColumnIds.KIN);
+                String profession = rs.getString(DBOperations.CharactersColumnIds.PROFESSION);
             }
         } catch (SQLException e) {
             
