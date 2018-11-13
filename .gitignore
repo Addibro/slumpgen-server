@@ -6,3 +6,6 @@
 
 # log
 servlet.log
+
+# db
+*.sql
