@@ -13,7 +13,7 @@ public class FakeGetCharacters implements GetCharacters {
     public List<? extends RPGCharacter> getAllCharacters() {
         if (characters == null) {
             // getFakeRPGCharacters();
-            fillFakeRPGCharacters();
+            fillFakeFBLCharacters();
         }
         return characters;
     }
@@ -24,8 +24,17 @@ public class FakeGetCharacters implements GetCharacters {
         characters.add(new RPGCharacter("Kuken David"));
     }
 
-    // private void fillFakeFBLCharacter() {
-    //     characters = new ArrayList<>();
-    //     characters.add(new FBLCharacter("Andreas", "THE BOSS", "human", "pro", new HashMap<String>(), "1", new HashMap<String>(), new HashMap<String>(), new HashMap<String>(), new ArrayList<String>()));
-    // }
+    private void fillFakeFBLCharacters() {
+        characters = new ArrayList<>();
+        characters.add(new FBLCharacter("Andreas", 
+                                        "THE BOSS", 
+                                        "human", 
+                                        "pro", 
+                                        new HashMap<>(), 
+                                        "1", 
+                                        new HashMap<>(), 
+                                        new HashMap<>(), 
+                                        new HashMap<>(), 
+                                        new ArrayList<>()));
+    }
 }

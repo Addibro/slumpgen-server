@@ -10,16 +10,16 @@ public class FBLCharacterBuilder {
     public String nickname;
     public String kin;
     public String profession;
-    public Map appearance;
+    public Map<String, String> appearance;
     public String age;
-    public Map attributes;
-    public Map skills;
-    public Map talents;
-    public List gear;
+    public Map<String, String> attributes;
+    public Map<String, String> skills;
+    public Map<String, String> talents;
+    public List<String> gear;
 
     public FBLCharacterBuilder with(
-        Consumer<FBLCharacterBuilder> builderFunction) {
-            builderFunction.accept(this);
+        Consumer<FBLCharacterBuilder> b) {
+            b.accept(this);
             return this;
     }
 

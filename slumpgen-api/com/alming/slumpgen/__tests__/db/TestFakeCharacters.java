@@ -8,7 +8,7 @@ import java.util.*;
 public class TestFakeCharacters {
     public static void main(String[] args) {
         System.out.println("--- TESTING GETTING FAKE CHARACTERS ---");
-        testGetFakeRPGCharacters();
+        testGetFakeFBLCharacters();
     }
 
     private static void testGetFakeRPGCharacters() {

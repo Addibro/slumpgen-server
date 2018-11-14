@@ -3,8 +3,7 @@ package com.alming.slumpgen.characters;
 import java.util.Map;
 import java.util.List;
 
-public class FBLCharacter extends RPGCharacter{
-    private String name;
+public class FBLCharacter extends RPGCharacter {
     private String nickname;
     private String kin;
     private String profession;
@@ -38,6 +37,6 @@ public class FBLCharacter extends RPGCharacter{
                         }
 
     public String toString(){
-        return name + " " + nickname;
+        return super.toString() + " " + nickname;
     }
 }
