@@ -4,6 +4,8 @@ import java.io.IOException;
 import java.io.OutputStreamWriter;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
 
@@ -11,7 +13,8 @@ import javax.servlet.*;
 import javax.servlet.http.*;
 
 import com.alming.slumpgen.storage.SQLGetCharacters;
-import com.alming.slumpgen.characters.RPGCharacter;
+import com.alming.slumpgen.characters.*;
+import com.web.json.FBLCharacterFormatter;
 import com.web.json.RPGCharacterFormatter;
 import com.web.http.QueryParser;
 
@@ -36,7 +39,17 @@ public class ServCharacters extends HttpServlet {
 
         SQLGetCharacters sqlGetCharacters = new SQLGetCharacters();
         List<RPGCharacter> rpgCharacters = sqlGetCharacters.getAllCharacters();
-        RPGCharacterFormatter formatter = new RPGCharacterFormatter(rpgCharacters);
+        List<FBLCharacter> fblCharacters = new ArrayList<>();
+        fblCharacters.add(new FBLCharacterBuilder().with(c -> {
+            c.name = "andy"; 
+            c.nickname = "andypandy"; 
+            c.appearance = "very cool";
+            c.kin = "human";
+            c.profession = "pro";
+            c.age = "100";
+            c.attributes = new HashMap<String, String>();
+        }).createFBLCharacter());
+        FBLCharacterFormatter formatter = new FBLCharacterFormatter(fblCharacters);
         String jsonOutput = formatter.format();
 
 

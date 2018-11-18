@@ -11,4 +11,12 @@ public interface Formatter<T> {
     static String newline() {
         return "\n";
     }
+
+    static String space() {
+        return "    ";
+    }
+
+    static String jsonAttribute(String key, String value) {
+        return space() + quote() + key + quote() + ": " + quote() + value + quote() + newline();
+    }
 }

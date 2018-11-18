@@ -1,6 +1,7 @@
 package com.alming.slumpgen.characters;
 
 import java.util.Map;
+import java.util.Collections;
 import java.util.List;
 
 public class FBLCharacter extends RPGCharacter {
@@ -75,28 +76,28 @@ public class FBLCharacter extends RPGCharacter {
      * @return the attributes
      */
     public Map<String, String> getAttributes() {
-        return attributes;
+        return Collections.unmodifiableMap(attributes);
     }
 
     /**
      * @return the talents
      */
     public Map<String, String> getTalents() {
-        return talents;
+        return Collections.unmodifiableMap(talents);
     }
 
     /**
      * @return the skills
      */
     public Map<String, String> getSkills() {
-        return skills;
+        return Collections.unmodifiableMap(skills);
     }
 
     /**
      * @return the gear
      */
     public List<String> getGear() {
-        return gear;
+        return Collections.unmodifiableList(gear);
     }
 
     public String toString(){
