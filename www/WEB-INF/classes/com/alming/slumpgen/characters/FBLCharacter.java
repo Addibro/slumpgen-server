@@ -35,6 +35,69 @@ public class FBLCharacter extends RPGCharacter {
                             this.talents = talents;
                             this.gear = gear;
                         }
+    
+    /**
+     * @return the nickname
+     */
+    public String getNickname() {
+        return nickname;
+    }
+
+    /**
+     * @return the kin
+     */
+    public String getKin() {
+        return kin;
+    }
+
+    /**
+     * @return the profession
+     */
+    public String getProfession() {
+        return profession;
+    }
+
+    /**
+     * @return the appearance
+     */
+    public String getAppearance() {
+        return appearance;
+    }
+
+    /**
+     * @return the age
+     */
+    public String getAge() {
+        return age;
+    }
+
+    /**
+     * @return the attributes
+     */
+    public Map<String, String> getAttributes() {
+        return attributes;
+    }
+
+    /**
+     * @return the talents
+     */
+    public Map<String, String> getTalents() {
+        return talents;
+    }
+
+    /**
+     * @return the skills
+     */
+    public Map<String, String> getSkills() {
+        return skills;
+    }
+
+    /**
+     * @return the gear
+     */
+    public List<String> getGear() {
+        return gear;
+    }
 
     public String toString(){
         return super.toString() + " " + nickname;
