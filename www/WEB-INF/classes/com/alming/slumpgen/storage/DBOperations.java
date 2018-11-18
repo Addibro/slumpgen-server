@@ -9,6 +9,11 @@ import java.sql.Statement;
 import java.sql.SQLException;
 
 public class DBOperations {
+    
+    // location of db
+    private static final String DB_LOCATION = "jdbc:sqlite:www/WEB-INF/db/characters.db";
+    private static Connection connection;
+
     public static class CharactersColumnIds {
         public static final int CHARACTER_ID = 1, NAME = 2;
     }
@@ -34,12 +39,7 @@ public class DBOperations {
         public static final int TALENT = 1;
         public static final int SCORE  = 2;
     }
-
-    // location of db
-    private static final String DB_LOCATION = "jdbc:sqlite:www/WEB-INF/db/characters.db";
     
-    private static Connection connection;
-
     // statically instantiate the connection (like a mini singleton)
     static {
         try {
@@ -57,7 +57,6 @@ public class DBOperations {
     public static ResultSet getAllCharactersRS() throws SQLException {
         try {
             Statement statement = connection.createStatement();
-            System.out.println(statement.toString());
             // test to get all from character table
             StringBuilder sql = new StringBuilder("SELECT * FROM character");
             return statement.executeQuery(sql.toString());

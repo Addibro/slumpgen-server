@@ -17,6 +17,6 @@ public interface Formatter<T> {
     }
 
     static String jsonAttribute(String key, String value) {
-        return space() + quote() + key + quote() + ": " + quote() + value + quote() + newline();
+        return newline() + space() + quote() + key + quote() + ": " + quote() + value + quote();
     }
 }

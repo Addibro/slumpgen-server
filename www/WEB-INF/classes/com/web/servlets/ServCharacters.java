@@ -40,7 +40,7 @@ public class ServCharacters extends HttpServlet {
         SQLGetCharacters sqlGetCharacters = new SQLGetCharacters();
         List<RPGCharacter> rpgCharacters = sqlGetCharacters.getAllCharacters();
         List<FBLCharacter> fblCharacters = new ArrayList<>();
-        fblCharacters.add(new FBLCharacterBuilder().with(c -> {
+        fblCharacters.addAll(Arrays.asList(new FBLCharacterBuilder().with(c -> {
             c.name = "andy"; 
             c.nickname = "andypandy"; 
             c.appearance = "very cool";
@@ -48,8 +48,17 @@ public class ServCharacters extends HttpServlet {
             c.profession = "pro";
             c.age = "100";
             c.attributes = new HashMap<String, String>();
-        }).createFBLCharacter());
+        }).createFBLCharacter(), new FBLCharacterBuilder().with(c -> {
+            c.name = "davy"; 
+            c.nickname = "davy gravy"; 
+            c.appearance = "average";
+            c.kin = "human";
+            c.profession = "pro";
+            c.age = "100";
+            c.attributes = new HashMap<String, String>();
+        }).createFBLCharacter()));
         FBLCharacterFormatter formatter = new FBLCharacterFormatter(fblCharacters);
+        RPGCharacterFormatter rpgCharacterFormatter = new RPGCharacterFormatter(rpgCharacters);
         String jsonOutput = formatter.format();
 
 

@@ -2,6 +2,7 @@ package com.web.json;
 
 import java.util.List;
 import java.util.StringJoiner;
+import java.util.stream.Collectors;
 
 import com.alming.slumpgen.characters.FBLCharacter;
 import com.alming.slumpgen.characters.FBLCharacterBuilder;
@@ -21,20 +22,17 @@ public class FBLCharacterFormatter implements Formatter<FBLCharacter> {
     public String format() {
         StringBuilder outerJson = new StringBuilder();
         outerJson.append("[\n");
-        StringJoiner jsonObjects = new StringJoiner(",", space() + "{" + newline(), space() + "}");
-        for (FBLCharacter c : characters) {
-            jsonObjects.add(jsonObj(c));
-        }
-        outerJson.append(jsonObjects.toString());
+        String jsonObjects2 = characters.stream()
+            .map(c -> jsonObj(c))
+            .collect(Collectors.joining(",\n"));
+        outerJson.append(jsonObjects2.toString());
         outerJson.append("\n]");
         return outerJson.toString();
     }
 
     @Override
     public String jsonObj(FBLCharacter c) {
-        StringJoiner obj = new StringJoiner(",");
-        System.out.println(obj.toString());
-        System.out.println(c);
+        StringJoiner obj = new StringJoiner(",", space() + "{", newline() + space() + "}");
         obj.add(jsonAttribute("name", c.getName()));
         obj.add(jsonAttribute("nickname", c.getNickname()));
         obj.add(jsonAttribute("kin", c.getKin()));
