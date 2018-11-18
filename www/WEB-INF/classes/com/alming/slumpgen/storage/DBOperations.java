@@ -3,34 +3,18 @@ package com.alming.slumpgen.storage;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.DriverManager;
+import java.sql.DatabaseMetaData;
 import java.sql.Connection;
 import java.sql.Statement;
 import java.sql.SQLException;
 
 public class DBOperations {
     public static class CharactersColumnIds {
-        public static final int NAME = 1;
-        public static final int NICKNAME = 2;
-        public static final int KIN = 3;
-        public static final int AGE = 5;
-        public static final int PROFESSION = 6;
-        public static final int APPEARANCE = 7;
-        public static final int GEAR = 8;
-        public static final int ATTRIBUTES = 9;
-        public static final int SKILLS = 10;
-        public static final int TALENTS = 11;
-        public static final int ORIGIN = 12;
-        public static final int LIFE_EVENTS = 13;
-    }
-
-    public static class AppearanceColumnIds {
-        public static final int FACE = 1;
-        public static final int BODY = 2;
-        public static final int CLOTHING = 3;
+        public static final int CHARACTER_ID = 1, NAME = 2;
     }
 
     public static class GearColumnIds {
-        public static final int item = 1;
+        public static final int ITEM = 1;
     }
 
     public static class AttributesColumnIds {
@@ -51,20 +35,18 @@ public class DBOperations {
         public static final int SCORE  = 2;
     }
 
-    public static class OriginColumnIds {
-        public static final int NAME = 1;
-    }
-
     // location of db
     private static final String DB_LOCATION = "jdbc:sqlite:www/WEB-INF/db/characters.db";
     
-    // try connection
     private static Connection connection;
 
     // statically instantiate the connection (like a mini singleton)
     static {
         try {
             connection = DriverManager.getConnection(DB_LOCATION);
+            System.out.println("Connection has been established...");
+            DatabaseMetaData meta = connection.getMetaData();
+            System.out.println("The driver name is: " + meta.getDriverName());
         } catch (SQLException e) {
             System.err.println(e.getMessage());
             // TODO throw exception to app in a very nice way
@@ -72,15 +54,18 @@ public class DBOperations {
     }
 
 
-    public static ResultSet getCharacterResultSet() {
+    public static ResultSet getAllCharactersRS() throws SQLException {
         try {
             Statement statement = connection.createStatement();
-            StringBuilder sql = new StringBuilder("SELECT * FROM characters;");
+            System.out.println(statement.toString());
+            // test to get all from character table
+            StringBuilder sql = new StringBuilder("SELECT * FROM character");
             return statement.executeQuery(sql.toString());
         } catch (SQLException e) {
-            System.err.println(e.getMessage());
             //TODO: handle exception to app in a very nice way
-            return null;
+            // throw new SQLException("Error executing the SQL: " + e.getMessage());
+            System.err.println(e.getMessage());
+            throw e;
         }
     }
 

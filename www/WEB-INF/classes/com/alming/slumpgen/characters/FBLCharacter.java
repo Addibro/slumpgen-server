@@ -7,23 +7,23 @@ public class FBLCharacter extends RPGCharacter {
     private String nickname;
     private String kin;
     private String profession;
-    private Map appearance;
+    private String appearance;
     private String age;
-    private Map attributes;
-    private Map skills;
-    private Map talents;
-    private List gear;
+    private Map<String, String> attributes;
+    private Map<String, String> skills;
+    private Map<String, String> talents;
+    private List<String> gear;
 
     public FBLCharacter(String name,
                         String nickname,
                         String kin,
                         String profession,
-                        Map appearance,
+                        String appearance,
                         String age,
-                        Map attributes,
-                        Map skills,
-                        Map talents,
-                        List gear){
+                        Map<String, String> attributes,
+                        Map<String, String> skills,
+                        Map<String, String> talents,
+                        List<String> gear){
                             super(name);
                             this.nickname = nickname;
                             this.kin = kin;

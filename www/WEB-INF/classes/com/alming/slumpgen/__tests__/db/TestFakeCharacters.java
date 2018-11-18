@@ -21,6 +21,7 @@ public class TestFakeCharacters {
 
     private static void testGetFakeFBLCharacters() {
         List<? extends RPGCharacter> characters = new FakeGetCharacters().getAllCharacters();
+        String expected = "[Andreas, THE BOSS]";
         System.out.println(characters);
     }
 }

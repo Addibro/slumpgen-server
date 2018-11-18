@@ -4,11 +4,11 @@
          xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
 
     <servlet> <!-- servlet definition, to connect the server name with the class name -->
-        <servlet-name>hello</servlet-name>
-        <servlet-class>com.web.Servlet</servlet-class>
+        <servlet-name>ServCharacters</servlet-name>
+        <servlet-class>com.web.servlets.ServCharacters</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>hello</servlet-name>
-        <url-pattern>/servlet</url-pattern>
+        <servlet-name>ServCharacters</servlet-name>
+        <url-pattern>/characters</url-pattern>
     </servlet-mapping>
 </web-app>

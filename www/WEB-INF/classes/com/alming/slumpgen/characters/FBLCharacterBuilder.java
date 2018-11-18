@@ -10,7 +10,7 @@ public class FBLCharacterBuilder {
     public String nickname;
     public String kin;
     public String profession;
-    public Map<String, String> appearance;
+    public String appearance;
     public String age;
     public Map<String, String> attributes;
     public Map<String, String> skills;
