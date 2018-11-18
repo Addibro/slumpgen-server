@@ -21,12 +21,11 @@ public class FBLCharacterFormatter implements Formatter<FBLCharacter> {
     @Override
     public String format() {
         StringBuilder outerJson = new StringBuilder();
-        outerJson.append("[\n");
-        String jsonObjects2 = characters.stream()
+        outerJson.append("[" + newline());
+        outerJson.append(characters.stream()
             .map(c -> jsonObj(c))
-            .collect(Collectors.joining(",\n"));
-        outerJson.append(jsonObjects2.toString());
-        outerJson.append("\n]");
+            .collect(Collectors.joining("," + newline())));
+        outerJson.append(newline() + "]");
         return outerJson.toString();
     }
 
