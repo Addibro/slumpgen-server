@@ -19,6 +19,7 @@ import com.alming.slumpgen.storage.SQLGetCharacters;
 import com.alming.slumpgen.characters.*;
 import com.web.json.FBLCharacterFormatter;
 import com.web.json.RPGCharacterFormatter;
+import com.web.json.FBLCharacterJsonParser;
 import com.web.http.QueryParser;
 import com.web.http.Query;
 
@@ -84,9 +85,17 @@ public class Main extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
             System.out.println(request.getMethod());
             System.out.println(request.getQueryString());
+            // System.out.println(request.getIntHeader(""));
             // Get character posted
-            List<String> json = request.getReader().lines().collect(Collectors.toList());
-            System.out.println(json);
-            
+            String json = request.getReader()
+                .lines()
+                .collect(Collectors.toList())
+                .toString();
+            FBLCharacterJsonParser parser = new FBLCharacterJsonParser();
+            try {
+                System.out.println(parser.parse(json));
+            } catch (Exception ex) {
+                System.out.println(ex);
+            }
     }
 }

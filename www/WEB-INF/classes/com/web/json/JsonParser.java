@@ -2,6 +2,6 @@ package com.web.json;
 
 import java.util.List;
 
-public class JsonParser<T> {
-    List<T> parse();
+public interface JsonParser<T> {
+    List<T> parse(String json);
 }
