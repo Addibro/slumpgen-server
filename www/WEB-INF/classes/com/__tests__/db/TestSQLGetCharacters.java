@@ -1,4 +1,4 @@
-package com.alming.slumpgen.__tests__.db;
+package com.__tests__.db;
 
 import com.alming.slumpgen.storage.SQLGetCharacters;
 

@@ -8,19 +8,23 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.stream.Collectors;
 
 import javax.servlet.*;
 import javax.servlet.http.*;
+
+import org.json.*;
 
 import com.alming.slumpgen.storage.SQLGetCharacters;
 import com.alming.slumpgen.characters.*;
 import com.web.json.FBLCharacterFormatter;
 import com.web.json.RPGCharacterFormatter;
 import com.web.http.QueryParser;
+import com.web.http.Query;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
 
-public class ServCharacters extends HttpServlet {
+public class Main extends HttpServlet {
 
     @Override
     public void init() throws ServletException {
@@ -31,12 +35,21 @@ public class ServCharacters extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) 
         throws ServletException, IOException {    
 
+        System.out.println("PathInfo(): " + request.getPathInfo());
+        System.out.println("RequestURL(): " + request.getRequestURI());
+        System.out.println("Method type: " + request.getMethod());
+
+        // Set request encoding
         request.setCharacterEncoding(UTF_8.name());
+        // Set content type 
         response.setContentType("application/json;charset=" + UTF_8.name());
+        // Check querystring 
+        List<Query> queries = QueryParser.parse(request.getQueryString());
 
         // setup a output to write the response body
-        PrintWriter out = response.getWriter();
+        PrintWriter out = response.getWriter();        
 
+        
         SQLGetCharacters sqlGetCharacters = new SQLGetCharacters();
         List<RPGCharacter> rpgCharacters = sqlGetCharacters.getAllCharacters();
         List<FBLCharacter> fblCharacters = new ArrayList<>();
@@ -61,9 +74,6 @@ public class ServCharacters extends HttpServlet {
         RPGCharacterFormatter rpgCharacterFormatter = new RPGCharacterFormatter(rpgCharacters);
         String jsonOutput = formatter.format();
 
-
-        // SQLGetCharacters sql = new SQLGetCharacters();
-        // List<RPGCharacter> rpgCharacters = sql.getAllCharacters();
         System.out.println(new java.util.Date() + " hello from servlet"); 
 
         out.append(jsonOutput);
@@ -71,8 +81,12 @@ public class ServCharacters extends HttpServlet {
     }
 
     @Override
-    public void doPost(HttpServletRequest request, HttpServletResponse response) 
-        throws ServletException, IOException {
-
-        }
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+            System.out.println(request.getMethod());
+            System.out.println(request.getQueryString());
+            // Get character posted
+            List<String> json = request.getReader().lines().collect(Collectors.toList());
+            System.out.println(json);
+            
+    }
 }

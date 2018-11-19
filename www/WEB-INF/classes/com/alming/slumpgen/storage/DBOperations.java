@@ -58,7 +58,7 @@ public class DBOperations {
         try {
             Statement statement = connection.createStatement();
             // test to get all from character table
-            StringBuilder sql = new StringBuilder("SELECT * FROM character");
+            StringBuilder sql = new StringBuilder("SELECT * FROM character NATURAL JOIN attributes");
             return statement.executeQuery(sql.toString());
         } catch (SQLException e) {
             //TODO: handle exception to app in a very nice way
@@ -67,5 +67,4 @@ public class DBOperations {
             throw e;
         }
     }
-
 }

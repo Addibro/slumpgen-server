@@ -25,6 +25,9 @@ public class SQLGetCharacters implements GetCharacters {
             while (rs.next()) {
                 String id       = rs.getString(DBOperations.CharactersColumnIds.CHARACTER_ID);
                 String name     = rs.getString(DBOperations.CharactersColumnIds.NAME);
+                String strength = rs.getString("strength");
+                String agility  = rs.getString("agility");
+                String empathy  = rs.getString("wits");
                 // String nickname   = rs.getString(DBOperations.CharactersColumnIds.NICKNAME);
                 // String kin        = rs.getString(DBOperations.CharactersColumnIds.KIN);
                 // String profession = rs.getString(DBOperations.CharactersColumnIds.PROFESSION);
