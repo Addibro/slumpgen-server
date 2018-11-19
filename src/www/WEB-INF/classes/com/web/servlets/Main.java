@@ -48,30 +48,11 @@ public class Main extends HttpServlet {
 
         // setup a output to write the response body
         PrintWriter out = response.getWriter();        
-
         
         SQLGetCharacters sqlGetCharacters = new SQLGetCharacters();
-        
-        List<FBLCharacter> fblCharacters = new ArrayList<>();
-        fblCharacters.addAll(Arrays.asList(new FBLCharacterBuilder().with(c -> {
-            c.name = "andy"; 
-            c.nickname = "andypandy"; 
-            c.appearance = "very cool";
-            c.kin = "human";
-            c.profession = "pro";
-            c.age = "100";
-            c.attributes = new HashMap<String, String>();
-        }).createFBLCharacter(), new FBLCharacterBuilder().with(c -> {
-            c.name = "davy"; 
-            c.nickname = "davy gravy"; 
-            c.appearance = "average";
-            c.kin = "human";
-            c.profession = "pro";
-            c.age = "100";
-            c.attributes = new HashMap<String, String>();
-        }).createFBLCharacter()));
+        List<FBLCharacter> fblCharacters = sqlGetCharacters.getAllCharacters();
+        System.out.println(fblCharacters);
         FBLCharacterFormatter formatter = new FBLCharacterFormatter(fblCharacters);
-
         String jsonOutput = formatter.format();
 
         System.out.println(new java.util.Date() + " hello from servlet"); 

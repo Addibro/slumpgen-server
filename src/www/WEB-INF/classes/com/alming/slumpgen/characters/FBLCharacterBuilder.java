@@ -12,13 +12,12 @@ public class FBLCharacterBuilder {
     public String profession;
     public String appearance;
     public String age;
-    public Map<String, String> attributes;
-    public Map<String, String> skills;
-    public Map<String, String> talents;
+    public Map<String, Integer> attributes;
+    public Map<String, Integer> skills;
+    public Map<String, Integer> talents;
     public List<String> gear;
 
-    public FBLCharacterBuilder with(
-        Consumer<FBLCharacterBuilder> b) {
+    public FBLCharacterBuilder with(Consumer<FBLCharacterBuilder> b) {
             b.accept(this);
             return this;
     }

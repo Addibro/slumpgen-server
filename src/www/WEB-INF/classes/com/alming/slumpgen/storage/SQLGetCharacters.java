@@ -21,22 +21,27 @@ public class SQLGetCharacters implements GetCharacters {
     private void readFromDB() {
         characters = new ArrayList<>();
         try {
-            ResultSet characters = DBOperations.getAllCharactersRS();
-            while (characters.next()) {
-                int id          = characters.getInt(DBOperations.CharactersColumnIds.CHARACTER_ID);
-                String name     = characters.getString(DBOperations.CharactersColumnIds.NAME);
-                String nickname = characters.getString(DBOperations.CharactersColumnIds.NICKNAME);
-                String strength = characters.getString("strength");
-                String agility  = characters.getString("agility");
-                String empathy  = characters.getString("wits");
-                // String nickname   = rs.getString(DBOperations.CharactersColumnIds.NICKNAME);
-                // String kin        = rs.getString(DBOperations.CharactersColumnIds.KIN);
-                // String profession = rs.getString(DBOperations.CharactersColumnIds.PROFESSION);
-                // String appearance = rs.getString(DBOperations.CharactersColumnIds.APPEARANCE);
-                // String age        = rs.getString(DBOperations.CharactersColumnIds.AGE);
+            ResultSet charRs = DBOperations.getAllCharactersRS();
+            while (charRs.next()) {
+                int id          = charRs.getInt(DBOperations.CharactersColumnLabels.CHARACTER_ID);
+                String name     = charRs.getString(DBOperations.CharactersColumnLabels.NAME);
+                String nickname = charRs.getString(DBOperations.CharactersColumnLabels.NICKNAME);
+                int strength = charRs.getInt(DBOperations.AttributesColumnLabels.STRENGTH);
+                int agility  = charRs.getInt(DBOperations.AttributesColumnLabels.AGILITY);
+                int wits     = charRs.getInt(DBOperations.AttributesColumnLabels.WITS);
+                int empathy  = charRs.getInt(DBOperations.AttributesColumnLabels.EMPATHY);
+
+                Map<String, Integer> attributes = new HashMap<>();
+                attributes.put("strength", strength); 
+                attributes.put("agility", agility); 
+                attributes.put("wits", wits); 
+                attributes.put("empathy", empathy); 
+                
                 characters.add(new FBLCharacterBuilder().with(c -> {
                     c.name = name;
-                }));
+                    c.nickname = nickname;
+                    c.attributes = attributes;
+                }).createFBLCharacter());
             }
         } catch (SQLException e) {
             // throw new SQLException("Error fetching data: " + e.getMessage());

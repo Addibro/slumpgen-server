@@ -40,9 +40,9 @@ public class FakeGetCharacters implements GetCharacters {
                 f.profession = "pro";
                 f.appearance = "nice";
                 f.age = "1";
-                f.attributes = new HashMap<String, String>();
-                f.skills = new HashMap<String, String>();
-                f.talents = new HashMap<String, String>();
+                f.attributes = new HashMap<String, Integer>();
+                f.skills = new HashMap<String, Integer>();
+                f.talents = new HashMap<String, Integer>();
                 f.gear = new ArrayList<String>();
             })
             .createFBLCharacter()

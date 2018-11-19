@@ -15,19 +15,16 @@ public class DBOperations {
     private static final String DB_LOCATION = "jdbc:sqlite:www/WEB-INF/db/characters.db";
     private static Connection connection;
 
-    public static class CharactersColumnIds {
-        public static final int CHARACTER_ID = 1, NAME = 2, NICKNAME = 3;
+    public static class CharactersColumnLabels {
+        public static final String CHARACTER_ID = "character_id", NAME = "name", NICKNAME = "nickname";
     }
 
-    public static class GearColumnIds {
-        public static final int ITEM = 1;
+    public static class GearColumnLabels {
+        public static final String ITEM = "item";
     }
 
-    public static class AttributesColumnIds {
-        public static final int STRENGTH = 1;
-        public static final int AGILITY = 2;
-        public static final int WITS = 3;
-        public static final int EMPATHY = 4;
+    public static class AttributesColumnLabels {
+        public static final String STRENGTH = "strength", AGILITY = "agility", WITS = "wits", EMPATHY = "empathy";
     }
 
     public static class SkillsColumnIds {
@@ -56,7 +53,8 @@ public class DBOperations {
 
 
     public static ResultSet getAllCharactersRS() throws SQLException {
-        try (Statement statement = connection.createStatement()) {
+        try {
+            Statement statement = connection.createStatement();
             // test to get all from character table
             StringBuilder sql = new StringBuilder("SELECT * FROM character NATURAL JOIN attributes");
             return statement.executeQuery(sql.toString());

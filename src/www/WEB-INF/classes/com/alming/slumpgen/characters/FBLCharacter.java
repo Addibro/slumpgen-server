@@ -10,9 +10,9 @@ public class FBLCharacter extends RPGCharacter {
     private String profession;
     private String appearance;
     private String age;
-    private Map<String, String> attributes;
-    private Map<String, String> skills;
-    private Map<String, String> talents;
+    private Map<String, Integer> attributes;
+    private Map<String, Integer> skills;
+    private Map<String, Integer> talents;
     private List<String> gear;
 
     public FBLCharacter(String name,
@@ -21,9 +21,9 @@ public class FBLCharacter extends RPGCharacter {
                         String profession,
                         String appearance,
                         String age,
-                        Map<String, String> attributes,
-                        Map<String, String> skills,
-                        Map<String, String> talents,
+                        Map<String, Integer> attributes,
+                        Map<String, Integer> skills,
+                        Map<String, Integer> talents,
                         List<String> gear){
                             super(name);
                             this.nickname = nickname;
@@ -75,21 +75,21 @@ public class FBLCharacter extends RPGCharacter {
     /**
      * @return the attributes
      */
-    public Map<String, String> getAttributes() {
+    public Map<String, Integer> getAttributes() {
         return Collections.unmodifiableMap(attributes);
     }
 
     /**
      * @return the talents
      */
-    public Map<String, String> getTalents() {
+    public Map<String, Integer> getTalents() {
         return Collections.unmodifiableMap(talents);
     }
 
     /**
      * @return the skills
      */
-    public Map<String, String> getSkills() {
+    public Map<String, Integer> getSkills() {
         return Collections.unmodifiableMap(skills);
     }
 
@@ -101,6 +101,6 @@ public class FBLCharacter extends RPGCharacter {
     }
 
     public String toString(){
-        return super.toString() + " " + nickname;
+        return super.toString() + " " + nickname + " " + attributes;
     }
 }

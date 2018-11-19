@@ -1,6 +1,7 @@
 package com.web.json;
 
 import java.util.List;
+import java.util.Map;
 import java.util.StringJoiner;
 import java.util.stream.Collectors;
 
@@ -62,5 +63,12 @@ public class FBLCharacterFormatter implements Formatter<FBLCharacter> {
             //TODO: handle exception
         }
         return obj.toString();
+    }
+
+    private String statObj(Map<String, Integer> stats) {
+        for (Map.Entry<String, Integer> stat : stats.entrySet()) {
+            
+        }
+        return null;
     }
 }

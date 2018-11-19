@@ -4,7 +4,7 @@ DATA='{"name": "andy", "nickname": "andypandy"}, {"name": "david", "nickname": "
 
 echo -e "\n\n--- Testing doGet... ---\n\n"
 sleep 1
-curl -i http://localhost:8080/characters/get
+curl -s http://localhost:8080/characters/get | jq
 sleep 1
 echo -e "\n\n--- Testing doPost using ${DATA} ---\n\n"
 sleep 1
