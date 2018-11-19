@@ -1,0 +1,79 @@
+[
+    {
+        "name": "rövare",
+        "kins": ["alderlänning", "eländer", "aslen"],
+        "attributes":[
+            {"name": "styrka",
+             "level": 3},
+            {"name": "smidighet",
+             "level": 3},
+            {"name": "intelligens",
+             "level": 2},
+            {"name": "karisma",
+             "level": 2}],
+        "skills": [
+            {"name": "närkamp",
+             "level": 2},
+            {"name": "skytte",
+             "level": 1},
+            {"name": "överlevnad",
+             "level": 2}],
+        "talents": [],
+        "gear": {
+            "primary_weapon": ["bredsvärd", "handyxa", "kortsvärd"],
+            "secondary_weapon": ["", "slunga", "kortbåge"],
+            "body": ["", "läderrustning", "nitläderrustning"]},
+        "purse": [
+            {"denomination": "kopparmynt",
+             "min": 0,
+             "max": 12}]
+    },
+    {
+        "name": "soldat",
+        "kins": ["alderlänning", "aslen"],
+        "attributes":[
+            {"name": "styrka",
+             "level": 4},
+            {"name": "smidighet",
+             "level": 3},
+            {"name": "intelligens",
+             "level": 3},
+            {"name": "karisma",
+             "level": 2}],
+        "skills": [
+            {"name": "uthållighet",
+             "level": 1},
+            {"name": "närkamp",
+             "level": 2},
+            {"name": "skytte",
+             "level": 2},
+            {"name": "överlevnad",
+             "level": 1}],
+        "talents": [
+            [{},
+            {"name": "klingans väg",
+             "level": 1},
+            {"name": "sköldens väg",
+             "level": 1}],
+            [{},
+            {"name": "spjutkämpe",
+             "level": 1},
+            {"name": "svärdskämpe",
+             "level": 1},
+            {"name": "yxkämpe",
+             "level": 1}]],
+        "gear": {
+            "primary_weapon": ["bredsvärd", "stridsyxa", "slagssvärd"],
+            "secondary_weapon": ["spjut", "långbåge", "armborst"],
+            "body": ["läderrustning", "ringbrynja"],
+            "head": ["", "öppen hjälm"],
+            "other": ["", "liten sköld", "stor sköld"]},
+        "purse": [
+            {"denomination": "silvermynt",
+             "min": 0,
+             "max": 1},
+            {"denomination": "kopparmynt",
+             "min": 0,
+             "max": 12}]
+    }
+]

@@ -1,3 +1,3 @@
 #!/bin/bash
 
-./build_servlet.sh && ./run_servlet.sh
+cd src/ && ./build_servlet.sh && ./run_servlet.sh

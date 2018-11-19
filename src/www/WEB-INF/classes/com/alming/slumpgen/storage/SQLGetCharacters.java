@@ -8,10 +8,10 @@ import com.alming.slumpgen.characters.*;
 import com.alming.slumpgen.storage.DBOperations;
 
 public class SQLGetCharacters implements GetCharacters {
-    private List<RPGCharacter> characters;
+    private List<FBLCharacter> characters;
 
     @Override
-    public List<RPGCharacter> getAllCharacters() {
+    public List<FBLCharacter> getAllCharacters() {
         if (characters == null) {
             readFromDB();
         }
@@ -21,19 +21,22 @@ public class SQLGetCharacters implements GetCharacters {
     private void readFromDB() {
         characters = new ArrayList<>();
         try {
-            ResultSet rs = DBOperations.getAllCharactersRS();
-            while (rs.next()) {
-                String id       = rs.getString(DBOperations.CharactersColumnIds.CHARACTER_ID);
-                String name     = rs.getString(DBOperations.CharactersColumnIds.NAME);
-                String strength = rs.getString("strength");
-                String agility  = rs.getString("agility");
-                String empathy  = rs.getString("wits");
+            ResultSet characters = DBOperations.getAllCharactersRS();
+            while (characters.next()) {
+                int id          = characters.getInt(DBOperations.CharactersColumnIds.CHARACTER_ID);
+                String name     = characters.getString(DBOperations.CharactersColumnIds.NAME);
+                String nickname = characters.getString(DBOperations.CharactersColumnIds.NICKNAME);
+                String strength = characters.getString("strength");
+                String agility  = characters.getString("agility");
+                String empathy  = characters.getString("wits");
                 // String nickname   = rs.getString(DBOperations.CharactersColumnIds.NICKNAME);
                 // String kin        = rs.getString(DBOperations.CharactersColumnIds.KIN);
                 // String profession = rs.getString(DBOperations.CharactersColumnIds.PROFESSION);
                 // String appearance = rs.getString(DBOperations.CharactersColumnIds.APPEARANCE);
                 // String age        = rs.getString(DBOperations.CharactersColumnIds.AGE);
-                characters.add(new RPGCharacter(name));
+                characters.add(new FBLCharacterBuilder().with(c -> {
+                    c.name = name;
+                }));
             }
         } catch (SQLException e) {
             // throw new SQLException("Error fetching data: " + e.getMessage());

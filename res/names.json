@@ -1,0 +1,28 @@
+[
+    {
+        "kin": "alderlänning",
+        "prefix": ["esg", "p", "pyr", "ter", "k", "fer", "d", "dyn",
+            "m", "h", "per", "st", "olm", "or", "n", "v", "gr", "beid",
+            "t", "ald", "urs", "dus", "nep", "art", "m", "alg", "k", "mag",
+            "mar", "est", "r", "rob", "mand", "grot"],
+        "infix": ["a", "o", "e", "i", "u"],
+        "suffix": ["r", "nax", "malda", "mar", "bald", "lb", "rb", "rkas",
+            "lkas", "dor", "ss", "ke", "mla", "lme", "la", "k", "rv", "n", "tur",
+            "red", "vard", "dan", "rod", "torda", "mbredo", "llmor", "rd", "ga",
+            "rel", "rga", "rga"]
+    },
+    {
+        "kin": "aslen",
+        "prefix": ["kalm", "arn", "vid", "mir", "sk", "pal",
+            "ag", "g", "s", "vis", "rob", "garm"],
+        "infix": ["a", "u", "e", "i", "y"],
+        "suffix": ["x", "lf", "vall", "knolt", "nsa", "dia", "tharm", "lia",
+            "kus", "r", "v", "rval", "ria"]
+    },
+    {
+        "kin": "eländer",
+        "prefix": ["n", "s", "er", "em", "t", "v"],
+        "infix": ["e", "i", "o", "a"],
+        "suffix": ["rvea", "nja", "rna", "rnia", "ckla"]
+    }
+]

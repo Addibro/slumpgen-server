@@ -1,0 +1,12 @@
+{
+    "nicknames": [{
+        "kin": "alderlänning",
+        "profession": null,
+        "prefix": ["alder"],
+        "suffix": ["man"]
+        },{
+        "kin": null,
+        "profession": "jägare",
+        "prefix": ["skogs"],
+        "suffix": ["räv"]}]
+}

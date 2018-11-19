@@ -1,0 +1,27 @@
+{
+    "name": "",
+    "nickname": "",
+    "kin": "",
+    "age": "",
+    "profession": "",
+    "appearance": {
+        "face": "",
+        "body": "",
+        "clothing": ""
+    },
+    "equipment": [
+        ""
+    ],
+    "attributes": {
+        "strength": 0,
+        "agility": 0,
+        "wits": 0,
+        "empathy": 0
+    },
+    "skills":{
+        "":0
+    },
+    "talents":{
+        "":0
+    }
+}

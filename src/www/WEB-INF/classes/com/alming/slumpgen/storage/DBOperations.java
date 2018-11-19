@@ -3,6 +3,7 @@ package com.alming.slumpgen.storage;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.DatabaseMetaData;
 import java.sql.Connection;
 import java.sql.Statement;
@@ -15,7 +16,7 @@ public class DBOperations {
     private static Connection connection;
 
     public static class CharactersColumnIds {
-        public static final int CHARACTER_ID = 1, NAME = 2;
+        public static final int CHARACTER_ID = 1, NAME = 2, NICKNAME = 3;
     }
 
     public static class GearColumnIds {
@@ -55,14 +56,24 @@ public class DBOperations {
 
 
     public static ResultSet getAllCharactersRS() throws SQLException {
-        try {
-            Statement statement = connection.createStatement();
+        try (Statement statement = connection.createStatement()) {
             // test to get all from character table
             StringBuilder sql = new StringBuilder("SELECT * FROM character NATURAL JOIN attributes");
             return statement.executeQuery(sql.toString());
         } catch (SQLException e) {
             //TODO: handle exception to app in a very nice way
             // throw new SQLException("Error executing the SQL: " + e.getMessage());
+            System.err.println(e.getMessage());
+            throw e;
+        }
+    }
+
+    public static ResultSet getCharacterSkillsRS(int i) throws SQLException {
+        StringBuilder sql = new StringBuilder("SELECT * FROM has_skills NATURAL JOIN skills WHERE character_id = ? ");
+        try (PreparedStatement statement = connection.prepareStatement(sql.toString())) {
+            statement.setInt(1, i);
+            return statement.executeQuery();
+        } catch (SQLException e) {
             System.err.println(e.getMessage());
             throw e;
         }

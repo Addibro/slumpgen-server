@@ -36,7 +36,6 @@ public class Main extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) 
         throws ServletException, IOException {    
 
-        System.out.println("PathInfo(): " + request.getPathInfo());
         System.out.println("RequestURL(): " + request.getRequestURI());
         System.out.println("Method type: " + request.getMethod());
 
@@ -52,7 +51,7 @@ public class Main extends HttpServlet {
 
         
         SQLGetCharacters sqlGetCharacters = new SQLGetCharacters();
-        List<RPGCharacter> rpgCharacters = sqlGetCharacters.getAllCharacters();
+        
         List<FBLCharacter> fblCharacters = new ArrayList<>();
         fblCharacters.addAll(Arrays.asList(new FBLCharacterBuilder().with(c -> {
             c.name = "andy"; 
@@ -72,7 +71,7 @@ public class Main extends HttpServlet {
             c.attributes = new HashMap<String, String>();
         }).createFBLCharacter()));
         FBLCharacterFormatter formatter = new FBLCharacterFormatter(fblCharacters);
-        RPGCharacterFormatter rpgCharacterFormatter = new RPGCharacterFormatter(rpgCharacters);
+
         String jsonOutput = formatter.format();
 
         System.out.println(new java.util.Date() + " hello from servlet"); 
@@ -82,20 +81,21 @@ public class Main extends HttpServlet {
     }
 
     @Override
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-            System.out.println(request.getMethod());
-            System.out.println(request.getQueryString());
-            // System.out.println(request.getIntHeader(""));
-            // Get character posted
-            String json = request.getReader()
-                .lines()
-                .collect(Collectors.toList())
-                .toString();
-            FBLCharacterJsonParser parser = new FBLCharacterJsonParser();
-            try {
-                System.out.println(parser.parse(json));
-            } catch (Exception ex) {
-                System.out.println(ex);
-            }
+    public void doPost(HttpServletRequest request, HttpServletResponse response) 
+        throws ServletException, IOException {
+        System.out.println("Method type: " + request.getMethod());
+
+        // System.out.println(request.getIntHeader(""));
+        // Get character posted
+        String json = request.getReader()
+            .lines()
+            .collect(Collectors.toList())
+            .toString();
+        FBLCharacterJsonParser parser = new FBLCharacterJsonParser();
+        try {
+            System.out.println(parser.parse(json));
+        } catch (Exception ex) {
+            System.out.println(ex);
+        }
     }
 }
