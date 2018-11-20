@@ -11,6 +11,7 @@ import static com.web.json.Formatter.newline;
 import static com.web.json.Formatter.quote;
 import static com.web.json.Formatter.space;
 import static com.web.json.Formatter.jsonAttribute;
+import static com.web.json.Formatter.getStringJoiner;
 
 public class FBLCharacterFormatter implements Formatter<FBLCharacter> {
     List<FBLCharacter> characters;
@@ -32,7 +33,7 @@ public class FBLCharacterFormatter implements Formatter<FBLCharacter> {
 
     @Override
     public String jsonObj(FBLCharacter c) {
-        StringJoiner obj = new StringJoiner(",", space() + "{", newline() + space() + "}");
+        StringJoiner obj = getStringJoiner();
         obj.add(jsonAttribute("name", c.getName()));
         obj.add(jsonAttribute("nickname", c.getNickname()));
         obj.add(jsonAttribute("kin", c.getKin()));
@@ -42,23 +43,23 @@ public class FBLCharacterFormatter implements Formatter<FBLCharacter> {
 
         // TODO NEW (THIS IS UGLY AF)
         try {
-            obj.add(jsonAttribute("attributes", c.getAttributes().toString()));
+            obj.add(jsonAttribute("attributes", statObj(c.getAttributes())));
         } catch (Exception e) {
             //TODO: handle exception
         }
         try {
-            obj.add(jsonAttribute("skills", c.getSkills().toString()));
+            obj.add(jsonAttribute("skills", statObj(c.getSkills())));
         } catch (Exception e) {
             //TODO: handle exception
         }
         
         try {
-            obj.add(jsonAttribute("talents", c.getTalents().toString()));
+            obj.add(jsonAttribute("talents", statObj(c.getTalents())));
         } catch (Exception e) {
             //TODO: handle exception
         }
         try {
-            obj.add(jsonAttribute("gear", c.getGear().toString()));    
+            obj.add(jsonAttribute("gear", gearObj(c.getGear())));    
         } catch (Exception e) {
             //TODO: handle exception
         }
@@ -66,9 +67,16 @@ public class FBLCharacterFormatter implements Formatter<FBLCharacter> {
     }
 
     private String statObj(Map<String, Integer> stats) {
+        StringJoiner output = getStringJoiner();
         for (Map.Entry<String, Integer> stat : stats.entrySet()) {
-            
+            output.add(jsonAttribute(stat.getKey(), stat.getValue()));
         }
-        return null;
+        return output.toString();
+    }
+
+    private String gearObj(List<String> gear) {
+        StringJoiner output = getStringJoiner();
+        gear.stream().forEach(g -> output.add(g));
+        return output.toString();
     }
 }

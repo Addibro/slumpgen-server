@@ -9,7 +9,7 @@ public class FBLCharacter extends RPGCharacter {
     private String kin;
     private String profession;
     private String appearance;
-    private String age;
+    private int age;
     private Map<String, Integer> attributes;
     private Map<String, Integer> skills;
     private Map<String, Integer> talents;
@@ -20,7 +20,7 @@ public class FBLCharacter extends RPGCharacter {
                         String kin,
                         String profession,
                         String appearance,
-                        String age,
+                        int age,
                         Map<String, Integer> attributes,
                         Map<String, Integer> skills,
                         Map<String, Integer> talents,
@@ -68,7 +68,7 @@ public class FBLCharacter extends RPGCharacter {
     /**
      * @return the age
      */
-    public String getAge() {
+    public int getAge() {
         return age;
     }
 

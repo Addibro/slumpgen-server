@@ -43,6 +43,7 @@ public class Main extends HttpServlet {
         request.setCharacterEncoding(UTF_8.name());
         // Set content type 
         response.setContentType("application/json;charset=" + UTF_8.name());
+
         // Check querystring 
         List<Query> queries = QueryParser.parse(request.getQueryString());
 
@@ -51,19 +52,20 @@ public class Main extends HttpServlet {
         
         SQLGetCharacters sqlGetCharacters = new SQLGetCharacters();
         List<FBLCharacter> fblCharacters = sqlGetCharacters.getAllCharacters();
-        System.out.println(fblCharacters);
         FBLCharacterFormatter formatter = new FBLCharacterFormatter(fblCharacters);
         String jsonOutput = formatter.format();
 
-        System.out.println(new java.util.Date() + " hello from servlet"); 
+        System.out.println(new java.util.Date() + ", doGet"); 
 
         out.append(jsonOutput);
+        System.out.println(jsonOutput);
         out.close();
     }
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) 
         throws ServletException, IOException {
+        System.out.println("RequestURL(): " + request.getRequestURI());
         System.out.println("Method type: " + request.getMethod());
 
         // System.out.println(request.getIntHeader(""));
@@ -73,10 +75,14 @@ public class Main extends HttpServlet {
             .collect(Collectors.toList())
             .toString();
         FBLCharacterJsonParser parser = new FBLCharacterJsonParser();
+
+        
+
         try {
             System.out.println(parser.parse(json));
         } catch (Exception ex) {
             System.out.println(ex);
+            response.setStatus(HttpServletResponse.SC_NOT_FOUND);
         }
     }
 }

@@ -16,7 +16,7 @@ public class DBOperations {
     private static Connection connection;
 
     public static class CharactersColumnLabels {
-        public static final String CHARACTER_ID = "character_id", NAME = "name", NICKNAME = "nickname";
+        public static final String CHARACTER_ID = "character_id", NAME = "name", NICKNAME = "nickname", KIN = "kin", AGE = "age", PROFESSION = "profession", APPEARANCE = "appearance";
     }
 
     public static class GearColumnLabels {
@@ -28,8 +28,7 @@ public class DBOperations {
     }
 
     public static class SkillsColumnIds {
-        public static final int SKILL = 1;
-        public static final int SCORE = 2;
+        public static final String SKILL = "skill", SCORE = "score";
 
     }
 
@@ -68,7 +67,8 @@ public class DBOperations {
 
     public static ResultSet getCharacterSkillsRS(int i) throws SQLException {
         StringBuilder sql = new StringBuilder("SELECT * FROM has_skills NATURAL JOIN skills WHERE character_id = ? ");
-        try (PreparedStatement statement = connection.prepareStatement(sql.toString())) {
+        try  {
+            PreparedStatement statement = connection.prepareStatement(sql.toString());
             statement.setInt(1, i);
             return statement.executeQuery();
         } catch (SQLException e) {

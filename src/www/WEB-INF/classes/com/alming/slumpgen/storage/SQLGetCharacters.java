@@ -26,6 +26,10 @@ public class SQLGetCharacters implements GetCharacters {
                 int id          = charRs.getInt(DBOperations.CharactersColumnLabels.CHARACTER_ID);
                 String name     = charRs.getString(DBOperations.CharactersColumnLabels.NAME);
                 String nickname = charRs.getString(DBOperations.CharactersColumnLabels.NICKNAME);
+                String kin      = charRs.getString(DBOperations.CharactersColumnLabels.KIN);
+                int age      = charRs.getInt(DBOperations.CharactersColumnLabels.AGE);
+                String profession = charRs.getString(DBOperations.CharactersColumnLabels.PROFESSION);
+                String appearance = charRs.getString(DBOperations.CharactersColumnLabels.APPEARANCE);
                 int strength = charRs.getInt(DBOperations.AttributesColumnLabels.STRENGTH);
                 int agility  = charRs.getInt(DBOperations.AttributesColumnLabels.AGILITY);
                 int wits     = charRs.getInt(DBOperations.AttributesColumnLabels.WITS);
@@ -36,11 +40,24 @@ public class SQLGetCharacters implements GetCharacters {
                 attributes.put("agility", agility); 
                 attributes.put("wits", wits); 
                 attributes.put("empathy", empathy); 
+
+                ResultSet skillsRs = DBOperations.getCharacterSkillsRS(id);
+                Map<String, Integer> skills = new HashMap<>();
+                while (skillsRs.next()) {
+                    String skill = skillsRs.getString(DBOperations.SkillsColumnIds.SKILL);
+                    int score = skillsRs.getInt(DBOperations.SkillsColumnIds.SCORE);
+                    skills.put(skill, score);
+                }
                 
                 characters.add(new FBLCharacterBuilder().with(c -> {
                     c.name = name;
                     c.nickname = nickname;
+                    c.kin = kin;
+                    c.age = age;
+                    c.profession = profession;
+                    c.appearance = appearance;
                     c.attributes = attributes;
+                    c.skills = skills;
                 }).createFBLCharacter());
             }
         } catch (SQLException e) {

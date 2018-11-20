@@ -11,7 +11,7 @@ public class FBLCharacterBuilder {
     public String kin;
     public String profession;
     public String appearance;
-    public String age;
+    public int age;
     public Map<String, Integer> attributes;
     public Map<String, Integer> skills;
     public Map<String, Integer> talents;
