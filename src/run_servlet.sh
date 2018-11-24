@@ -1,5 +1,5 @@
 #!/bin/bash
 
 echo "Running servlet..."
-java -jar winstone.jar --webroot=www 
+java -cp ../bin -jar winstone.jar --webroot=www 
 
