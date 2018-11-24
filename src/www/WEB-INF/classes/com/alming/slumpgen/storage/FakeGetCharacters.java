@@ -5,27 +5,21 @@ import java.util.*;
 import com.alming.slumpgen.characters.*;
 import com.alming.slumpgen.storage.*;
 
-public class FakeGetCharacters implements GetCharacters {
+public class FakeGetCharacters implements GetCharacters<FBLCharacter> {
 
-    private List<RPGCharacter> characters;
+    private List<FBLCharacter> characters;
 
     /**
      * Returns fake RPGCharacters
      * @return a List of characters of RPGCharacters
      */
     @Override
-    public List<? extends RPGCharacter> getAllCharacters() { 
+    public List<FBLCharacter> getAllCharacters() { 
         if (characters == null) {
             // getFakeRPGCharacters();
             fillFakeFBLCharacters();
         }
         return characters;
-    }
-
-    private void fillFakeRPGCharacters() {
-        characters = new ArrayList<>();
-        characters.add(new RPGCharacter("Andreas"));
-        characters.add(new RPGCharacter("Kuken David"));
     }
 
     private void fillFakeFBLCharacters() {
@@ -35,11 +29,8 @@ public class FakeGetCharacters implements GetCharacters {
                 f.name = "Andreas";
             })
             .with(f -> {
-                f.nickname = "the boss";
                 f.kin = "human";
-                f.profession = "pro";
-                f.appearance = "nice";
-                f.age = 1;
+                f.creed= "pro";
                 f.attributes = new HashMap<String, Integer>();
                 f.skills = new HashMap<String, Integer>();
                 f.talents = new HashMap<String, Integer>();

@@ -4,46 +4,39 @@ import java.util.Map;
 import java.util.Collections;
 import java.util.List;
 
-public class FBLCharacter extends RPGCharacter {
-    private String nickname;
+public class FBLCharacter {
+    private String name;
     private String kin;
-    private String profession;
-    private String appearance;
-    private int age;
+    private String creed;
     private Map<String, Integer> attributes;
     private Map<String, Integer> skills;
     private Map<String, Integer> talents;
     private List<String> gear;
 
     public FBLCharacter(String name,
-                        String nickname,
                         String kin,
-                        String profession,
-                        String appearance,
-                        int age,
+                        String creed,
                         Map<String, Integer> attributes,
                         Map<String, Integer> skills,
                         Map<String, Integer> talents,
                         List<String> gear){
-                            super(name);
-                            this.nickname = nickname;
+                            this.name = name;
                             this.kin = kin;
-                            this.profession = profession;
-                            this.appearance = appearance;
-                            this.age = age;
+                            this.creed = creed;
                             this.attributes = attributes;
                             this.skills = skills;
                             this.talents = talents;
                             this.gear = gear;
                         }
-    
-    /**
-     * @return the nickname
-     */
-    public String getNickname() {
-        return nickname;
-    }
 
+
+    /**
+     * @return the name
+     */
+    public String getName() {
+        return name;
+    }
+    
     /**
      * @return the kin
      */
@@ -52,24 +45,10 @@ public class FBLCharacter extends RPGCharacter {
     }
 
     /**
-     * @return the profession
+     * @return the creed
      */
-    public String getProfession() {
-        return profession;
-    }
-
-    /**
-     * @return the appearance
-     */
-    public String getAppearance() {
-        return appearance;
-    }
-
-    /**
-     * @return the age
-     */
-    public int getAge() {
-        return age;
+    public String getCreed() {
+        return creed;
     }
 
     /**
@@ -101,6 +80,6 @@ public class FBLCharacter extends RPGCharacter {
     }
 
     public String toString(){
-        return super.toString() + " " + nickname + " " + attributes;
+        return "Name: " + name + "\nAttributes: " + attributes;
     }
 }

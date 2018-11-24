@@ -18,10 +18,8 @@ public class FBLCharacterJsonParser implements JsonParser<FBLCharacter> {
         for (int i = 0; i < outerJson.length(); i++) {
             JSONObject obj = outerJson.getJSONObject(i);
             String name = obj.getString("name");
-            String nickname = obj.getString("nickname");
             characters.add(new FBLCharacterBuilder().with(c -> {
-                c.name = name; 
-                c.nickname = nickname;
+                c.name = name;
             }).createFBLCharacter());
         }
         return characters;

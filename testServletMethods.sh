@@ -1,10 +1,11 @@
 #!/bin/bash
 
-DATA='{"name": "andy", "nickname": "andypandy"}, {"name": "david", "nickname": "davipady"}'
-
-echo -e "\n\n--- Testing doGet... ---\n\n"
+DATA='{"name": "andy", "kin": "human"}, {"name": "david", "kin": "human"}'
+QUERY='creeds'
+echo -e "\n\n--- Testing localhost:8080/characters/fetch?res=$QUERY ---\n\n"
 sleep 1
-curl -s http://localhost:8080/characters/get | jq
+
+curl -s http://localhost:8080/characters/fetch?res=$QUERY | jq
 sleep 1
 echo -e "\n\n--- Testing doPost using ${DATA} ---\n\n"
 sleep 1

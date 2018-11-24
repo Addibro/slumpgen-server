@@ -16,7 +16,7 @@ public class DBOperations {
     private static Connection connection;
 
     public static class CharactersColumnLabels {
-        public static final String CHARACTER_ID = "character_id", NAME = "name", NICKNAME = "nickname", KIN = "kin", AGE = "age", PROFESSION = "profession", APPEARANCE = "appearance";
+        public static final String CHARACTER_ID = "character_id", NAME = "name", NICKNAME = "nickname", KIN = "kin", AGE = "age", CREED = "creed", APPEARANCE = "appearance";
     }
 
     public static class GearColumnLabels {
@@ -76,4 +76,6 @@ public class DBOperations {
             throw e;
         }
     }
+
+
 }

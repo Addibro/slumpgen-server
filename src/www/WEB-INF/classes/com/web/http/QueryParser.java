@@ -15,11 +15,8 @@ import com.web.http.Query;
 public class QueryParser {
     private QueryParser() {}
 
-    public static List<Query> parse(String querystring) {
-        return (querystring.isEmpty() || querystring == null) 
-        ? Collections.emptyList() 
-        : Arrays.stream(querystring.split("&"))
-            .map(q -> new Query(q.split("=")[0], q.split("=")[1]))
-            .collect(Collectors.toList());
+    public static Query parse(String querystring) {
+        if (querystring == null || querystring.isEmpty()) return null;
+        return new Query(querystring.split("=")[0], querystring.split("=")[1]);
     }
 }

@@ -7,11 +7,8 @@ import java.util.function.*;
 
 public class FBLCharacterBuilder {
     public String name;
-    public String nickname;
     public String kin;
-    public String profession;
-    public String appearance;
-    public int age;
+    public String creed;
     public Map<String, Integer> attributes;
     public Map<String, Integer> skills;
     public Map<String, Integer> talents;
@@ -23,12 +20,9 @@ public class FBLCharacterBuilder {
     }
 
     public FBLCharacter createFBLCharacter() {
-        return new FBLCharacter(name, 
-                                nickname, 
+        return new FBLCharacter(name,  
                                 kin, 
-                                profession, 
-                                appearance, 
-                                age, 
+                                creed, 
                                 attributes, 
                                 skills, 
                                 talents, 

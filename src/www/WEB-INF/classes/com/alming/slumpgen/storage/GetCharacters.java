@@ -5,9 +5,9 @@ import java.util.List;
 
 import com.alming.slumpgen.characters.*;
 
-public interface GetCharacters {
+public interface GetCharacters<T> {
     /**
      * @return a List of RPGCharacters
      */
-    List<? extends RPGCharacter> getAllCharacters();
+    List<T> getAllCharacters();
 }

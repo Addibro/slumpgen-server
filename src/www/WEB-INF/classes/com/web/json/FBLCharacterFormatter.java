@@ -35,11 +35,8 @@ public class FBLCharacterFormatter implements Formatter<FBLCharacter> {
     public String jsonObj(FBLCharacter c) {
         StringJoiner obj = getStringJoiner();
         obj.add(jsonAttribute("name", c.getName()));
-        obj.add(jsonAttribute("nickname", c.getNickname()));
         obj.add(jsonAttribute("kin", c.getKin()));
-        obj.add(jsonAttribute("profession", c.getProfession()));
-        obj.add(jsonAttribute("appearance", c.getAppearance()));
-        obj.add(jsonAttribute("age", c.getAge()));
+        obj.add(jsonAttribute("creed", c.getCreed()));
 
         // TODO NEW (THIS IS UGLY AF)
         try {

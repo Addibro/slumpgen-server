@@ -1,0 +1,27 @@
+[
+    {
+        "kins": [],
+        "creeds": ["soldat"],
+        "prefix": ["strids", "blod", "hugg", "blad", "egg", "sköld", "stål",
+        "järn", "svärds", "fred", "freds", "slag", "död"],
+        "suffix": ["hand", "blod", "hugg", "kämpe", "sköld", "bringa", "brynja", "bane", "bringare", "ryttare"]
+    },
+    {
+        "kins": ["alderlänning"],
+        "creeds": [],
+        "prefix": ["alder", "orm"],
+        "suffix": []
+    },
+    {
+        "kins": ["aslen"],
+        "creeds": ["ryttare"],
+        "prefix": ["häst", "horn", "hov", "halm"],
+        "suffix": ["slagare", "sporre", "sadel"]
+    },
+    {
+        "kins": [],
+        "creeds": ["tjuv", "rövare"],
+        "prefix": ["smuts", "stövel", "guld", "penga", "kniv", "fick", "röv"],
+        "suffix": ["hand", "pung", "roffare", "rövare", "stövel", "fot", "kniv", "dolk", "balle"]
+    }
+]

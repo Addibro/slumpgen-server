@@ -1,0 +1,304 @@
+[
+    {
+        "name": "rövare",
+        "kins": ["alderlänning", "eländer", "aslen"],
+        "attributes":[
+            {
+                "name": "styrka",
+                "level": 3
+            },
+            {
+                "name": "smidighet",
+                "level": 3
+            },
+            {
+                "name": "intelligens",
+                "level": 2
+            },
+            {   
+                "name": "karisma",
+                "level": 2
+            }
+        ],
+        "skills": [
+            {
+                "name": "närkamp",
+                "level": 2
+            },
+            {
+                "name": "skytte",
+                "level": 1
+            },
+            {   
+                "name": "överlevnad",
+                "level": 2
+            }
+        ],
+        "talents": [],
+        "gear": {
+            "primary_weapon": [{"name": "bredsvärd"}, {"name": "handyxa"}, {"name": "kortsvärd"}],
+            "secondary_weapon": [{}, {"name": "slunga"}, {"name": "kortbåge"}],
+            "body": [{}, {"name": "läderrustning"}, {"name": "nitläderrustning"}]
+        },
+        "purse": [
+            {
+                "denomination": "kopparmynt",
+                "min": 0,
+                "max": 12
+            }
+        ]
+    },
+    {
+        "name": "soldat",
+        "kins": ["alderlänning", "aslen"],
+        "attributes":[
+            {
+                "name": "styrka",
+                "level": 4
+            },
+            {
+                "name": "smidighet",
+                "level": 3
+            },
+            {
+                "name": "intelligens",
+                "level": 3
+            },
+            {
+                "name": "karisma",
+                "level": 2
+            }
+        ],
+        "skills": [
+            {
+                "name": "uthållighet",
+                "level": 1
+            },
+            {
+                "name": "närkamp",
+                "level": 2
+            },
+            {   
+                "name": "skytte",
+                "level": 2
+            },
+            {
+                "name": "överlevnad",
+                "level": 1
+            }
+        ],
+        "talents": [
+            [{
+
+            },
+            {
+                "name": "klingans väg",
+                "level": 1
+            },
+            {
+                "name": "sköldens väg",
+                "level": 1
+            }],
+            [{
+
+            },
+            {
+                "name": "spjutkämpe",
+                "level": 1
+            },
+            {
+                "name": "svärdskämpe",
+                "level": 1
+            },
+            {
+                "name": "yxkämpe",
+                "level": 1
+            }]
+        ],
+        "gear": {
+            "primary_weapon": [{"name": "bredsvärd"}, {"name": "slagssvärd"}, {"name": "stridsyxa"}],
+            "secondary_weapon": [{}, {"name": "spjut"}, {"name": "långbåge"}, {"name": "kortbåge"}],
+            "body": [{"name": "läderrustning"}, {"name": "ringbrynja"}],
+            "head": [{"name": "öppen hjälm"}],
+            "other": [{}, {"name": "liten sköld"}, {"name": "stor sköld"}]},
+        "purse": [
+            {
+                "denomination": "silvermynt",
+                "min": 0,
+                "max": 1
+            },
+            {
+                "denomination": "kopparmynt",
+                "min": 0,
+                "max": 12
+            }
+        ]
+    },{
+        "name": "ryttare",
+        "kins": ["alderlänning", "aslen"],
+        "attributes":[
+            {
+                "name": "styrka",
+                "level": 3
+            },
+            {
+                "name": "smidighet",
+                "level": 4
+            },
+            {
+                "name": "intelligens",
+                "level": 3
+            },
+            {   "name": "karisma",
+                "level": 3
+            }
+        ],
+        "skills": [
+            {
+                "name": "närkamp",
+                "level": 2
+            },
+            {   
+                "name": "överlevnad",
+                "level": 1
+            },
+            {
+                "name": "djurhantering",
+                "level": 3
+            }
+        ],
+        "talents": [
+            [{
+
+            },
+            {
+                "name": "riddarens väg",
+                "level": 1
+            }],
+            [{
+
+            },
+            {
+                "name": "ryttarkämpe",
+                "level": 1
+            },
+            {
+                "name": "svärdskämpe",
+                "level": 1
+            },
+            {
+                "name": "spjutkämpe",
+                "level": 1
+            }]
+        ],
+        "gear": {
+            "primary_weapon": [{"name": "bredsvärd"}, {"name": "kortspjut"}],
+            "secondary_weapon": [{}, {"name": "dolk"}, {"name": "kortbåge"}],
+            "body": [{}, {"name": "läderrustning"}, {"name": "nitläderrustning"}, {"name": "ringbrynja"}],
+            "head": [{}, {"name": "öppen hjälm"}],
+            "other": [{}, {"name": "liten sköld"}],
+            "mount": [{"name": "ridhäst"}]},
+        "purse": [
+            {
+                "denomination": "kopparmynt",
+                "min": 0,
+                "max": 12
+            }
+        ]
+    },
+    {
+        "name": "tjuv",
+        "kins": ["alderlänning", "klener"],
+        "attributes":[
+            {
+                "name": "styrka",
+                "level": 2
+            },
+            {
+                "name": "smidighet",
+                "level": 4
+            },
+            {
+                "name": "intelligens",
+                "level": 3
+            },
+            {
+                "name": "karisma",
+                "level": 3
+            }],
+        "skills": [
+            {
+                "name": "smyga",
+                "level": 2
+            },
+            {
+                "name": "fingerfärdighet",
+                "level": 3
+            },
+            {
+                "name": "rörlighet",
+                "level": 2
+            },
+            {
+                "name": "närkamp",
+                "level": 1
+            },
+            {
+                "name": "skytte",
+                "level": 1
+            }
+        ],
+        "talents": [
+            [{
+
+            },
+            {
+                "name": "ansiktets väg",
+                "level": 1
+            }],
+            [{
+
+            },
+            {
+                "name": "blixtsnabb",
+                "level": 1
+            },
+            {
+                "name": "hal som en ål",
+                "level": 1
+            },
+            {
+                "name": "snabbdrag",
+                "level": 1
+            },
+            {   
+                "name": "stadig på foten",
+                "level": 1
+            },
+            {
+                "name": "låsdyrkare",
+                "level": 1
+            },
+            {
+                "name": "knivkämpe",
+                "level": 1
+            },
+            {
+                "name": "dubbelhänt",
+                "level": 1
+            }]
+        ],
+        "gear": {
+            "primary_weapon": [{"name": "kniv"}, {"name": "dolk"}, {"name": "två dolkar"}, {"name": "två knivar"}],
+            "secondary_weapon": [{}, {"name": "kastkniv"}, {"name": "slunga"}],
+            "body": [{}, {"name": "läderrustning"}],
+            "other": [{}, {"name": "dyrkar"}]},
+        "purse": [
+            {
+                "denomination": "kopparmynt",
+                "min": 0,
+                "max": 24
+            }
+        ]
+    }
+]

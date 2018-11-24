@@ -25,11 +25,8 @@ public class SQLGetCharacters implements GetCharacters {
             while (charRs.next()) {
                 int id          = charRs.getInt(DBOperations.CharactersColumnLabels.CHARACTER_ID);
                 String name     = charRs.getString(DBOperations.CharactersColumnLabels.NAME);
-                String nickname = charRs.getString(DBOperations.CharactersColumnLabels.NICKNAME);
                 String kin      = charRs.getString(DBOperations.CharactersColumnLabels.KIN);
-                int age      = charRs.getInt(DBOperations.CharactersColumnLabels.AGE);
-                String profession = charRs.getString(DBOperations.CharactersColumnLabels.PROFESSION);
-                String appearance = charRs.getString(DBOperations.CharactersColumnLabels.APPEARANCE);
+                String creed = charRs.getString(DBOperations.CharactersColumnLabels.CREED);
                 int strength = charRs.getInt(DBOperations.AttributesColumnLabels.STRENGTH);
                 int agility  = charRs.getInt(DBOperations.AttributesColumnLabels.AGILITY);
                 int wits     = charRs.getInt(DBOperations.AttributesColumnLabels.WITS);
@@ -51,11 +48,8 @@ public class SQLGetCharacters implements GetCharacters {
                 
                 characters.add(new FBLCharacterBuilder().with(c -> {
                     c.name = name;
-                    c.nickname = nickname;
                     c.kin = kin;
-                    c.age = age;
-                    c.profession = profession;
-                    c.appearance = appearance;
+                    c.creed = creed;
                     c.attributes = attributes;
                     c.skills = skills;
                 }).createFBLCharacter());
