@@ -1,27 +1,53 @@
 [
     {
         "kins": [],
-        "creeds": ["soldat"],
-        "prefix": ["strids", "blod", "hugg", "blad", "egg", "sköld", "stål",
-        "järn", "svärds", "fred", "freds", "slag", "död"],
-        "suffix": ["hand", "blod", "hugg", "kämpe", "sköld", "bringa", "brynja", "bane", "bringare", "ryttare"]
-    },
-    {
-        "kins": ["alderlänning"],
+        "creeds": ["soldat", "järngardist", "svartvinge"],
+        "prefix": ["strids", "hugg", "blad", "sköld", "stål", "kamp", "vrål",
+        "järn", "svärds", "freds", "slags", "döds", "björn", "tjur", "blods"],
+        "suffix": ["hand", "blod", "hugg", "kämpe", "sköld", "bringa", "brynja", "bane", "bringare",
+            "knekt", "klinga", "vakt", "skyddare", "stridare", "drake", "blad", "kämpe", "rop",
+            "vrål", "kall", "hjälte", "värn", "brytare", "krossare", "räddare"]
+    }, {
+        "kins": [],
+        "creeds": ["rostbroder", "järngardist"],
+        "prefix": ["blods", "rost", "järn", "döds", "slakt", "smärt", "van", "krok", "pest",
+            "veder", "sannings", ""],
+        "suffix": ["blödare", "slaktare", "vittra", "offrare", "mask", "klot", "gissel",
+            "piska", "spö", "flagell", "späkare", "plåga", "pina", "martyr", "hunsare",
+            "tuktare", "hämnare", "salig", "sällad", "frälst"]
+    },{
+    "kins": [],
+    "creeds": ["korpsyster", "svartvinge"],
+    "prefix": ["korp", "kråk", "fågel", "trast"],
+    "suffix": ["vinge", "blödare", "fjäder", "kall", "kättare", "klo", "sökare", "farare"]
+    },{
+    "kins": [],
+    "creeds": ["svartvinge"],
+    "prefix": ["as", "åtel", "kadaver", "skrov", "mörker", "gam"],
+    "suffix": ["lämning", "ätare", "roffare", "straffare", "syndare", "krake", "bödel"]
+}   ,{
+        "kins": ["alderlänning", "klener"],
         "creeds": [],
-        "prefix": ["alder", "orm"],
-        "suffix": []
-    },
-    {
+        "prefix": ["alder"],
+        "suffix": ["karl", "man", "kvinna", "mö", "son", "dotter"]
+    },{
         "kins": ["aslen"],
         "creeds": ["ryttare"],
-        "prefix": ["häst", "horn", "hov", "halm"],
-        "suffix": ["slagare", "sporre", "sadel"]
-    },
-    {
+        "prefix": ["häst", "horn", "hov", "halm", "töm", "rem", "tygel", "träns", "spjut"],
+        "suffix": ["slagare", "sporre", "sadel", "ryttare", "travare", "dragare", "kuse", "märr", "hingst",
+            "springare", "bets", "lans", "stöt", "stötare", "blåsare"]
+    },{
         "kins": [],
         "creeds": ["tjuv", "rövare"],
         "prefix": ["smuts", "stövel", "guld", "penga", "kniv", "fick", "röv"],
-        "suffix": ["hand", "pung", "roffare", "rövare", "stövel", "fot", "kniv", "dolk", "balle"]
+        "suffix": ["hand", "pung", "roffare", "rövare", "stövel", "fot", "kniv", "dolk", "balle", "snyting"]
+    },{
+        "kins": [],
+        "creeds": ["jägare"],
+        "prefix": ["skogs", "vilt", "hjort", "väg", "varg", "räv", "björn", "vid", "ask", "pil", "gran",
+            "svin", "best", "bråd", "ulv", "grå", "stygg", "sälg", "älg", "sork", "mark", "ljung"],
+        "suffix": ["stigare", "stegare", "stige", "björn", "päls", "båge", "skytt", "skytten",
+            "vandrare", "läder", "träd", "garvare", "brasa", "lund", "dunge", "hult", "backe", "hage",
+            "strävare", "fångst", "fä", "bamse", "vide", "fälla", "snara", "sax", "buske"]
     }
 ]

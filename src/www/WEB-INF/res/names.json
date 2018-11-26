@@ -3,13 +3,13 @@
         "kins": ["alderlänning", "klener"],
         "prefix": ["esg", "p", "j", "pyr", "ter", "k", "fer", "d", "dyn",
             "m", "h", "per", "st", "olm", "or", "n", "v", "gr", "beid",
-            "t", "ald", "urs", "dus", "nep", "art", "m", "alg", "k", "mag",
-            "mar", "est", "r", "rob", "mand", "grot", "bald"],
+            "t", "ald", "urs", "dus", "nep", "art", "m", "alg", "k", "mag", "tr",
+            "mar", "est", "r", "rob", "mand", "grot", "bald", "g", "b", "kn", "sv", "par"],
         "infix": ["a", "o", "e", "i", "u", "ä"],
         "suffix": ["n", "r", "l", "nax", "malda", "mar", "bald", "lb", "rb", "rkas",
             "lkas", "dor", "ss", "ke", "mla", "lme", "la", "k", "rv", "tur",
             "red", "vard", "dan", "rod", "torda", "mbredo", "llmor", "rd", "ga",
-            "rel", "rga", "rga", "vla", "rna"]
+            "rel", "rga", "rga", "vla", "rna", "torna", "nsmyra"]
     },
     {
         "kins": ["aslen"],
