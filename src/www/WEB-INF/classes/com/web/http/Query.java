@@ -3,6 +3,7 @@ package com.web.http;
 public class Query {
     private String key;
     private String value;
+    public Query() {}
     public Query(String key, String value) {
         this.key = key;
         this.value = value;

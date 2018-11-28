@@ -12,7 +12,20 @@ public class Resources {
     public static final String NICKNAMES = "www/WEB-INF/res/nicknames.json";
     public static final String CREEDS = "www/WEB-INF/res/creeds.json";
 
-    public static String getResource(String res) throws FileNotFoundException {
+    public static String getResource(String res) throws IllegalArgumentException, FileNotFoundException {
+        switch (res) {
+            case "names":
+                return read(Resources.NAMES);
+            case "nicknames":
+                return read(Resources.NICKNAMES);
+            case "creeds":
+                return read(Resources.CREEDS);        
+            default:
+                throw new IllegalArgumentException("No resource");
+        }
+    }
+
+    private static String read(String res) throws FileNotFoundException {
         return new BufferedReader(new FileReader(res))
             .lines()
             .collect(Collectors.joining())

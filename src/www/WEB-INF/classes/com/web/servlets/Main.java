@@ -2,6 +2,7 @@ package com.web.servlets;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.nio.file.Paths;
 import java.io.IOException;
@@ -13,6 +14,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
 
 import javax.servlet.*;
@@ -32,8 +34,6 @@ import static java.nio.charset.StandardCharsets.UTF_8;
 
 public class Main extends HttpServlet {
 
-    private static final String NAMES = "/";
-
     @Override
     public void init() throws ServletException {
         Locale.setDefault(Locale.ENGLISH);
@@ -52,39 +52,21 @@ public class Main extends HttpServlet {
         response.setContentType("application/json;charset=" + UTF_8.name());
 
         // setup a output to write the response body
-        PrintWriter out = response.getWriter();        
+        PrintWriter out = response.getWriter();      
         
-        // SQLGetCharacters sqlGetCharacters = new SQLGetCharacters();
-        // List<FBLCharacter> fblCharacters = sqlGetCharacters.getAllCharacters();
-        // FBLCharacterFormatter formatter = new FBLCharacterFormatter(fblCharacters);
-        // String jsonOutput = formatter.format();
+        System.out.println(request.getQueryString());
 
-        System.out.println(new java.util.Date() + ", doGet"); 
-
-        // Check querystring 
-        Query query = QueryParser.parse(request.getQueryString());
-        System.out.println(query);
-        if (query == null) response.setStatus(HttpServletResponse.SC_NOT_FOUND);
-        else {
-            switch (query.getValue()) {
-                case "names":
-                    String names = Resources.getResource(Resources.NAMES);
-                    out.append(names);
-                    break;
-                case "nicknames":
-                    String nicknames = Resources.getResource(Resources.NICKNAMES);
-                    out.append(nicknames);
-                    break;
-                case "creeds":
-                    String creeds = Resources.getResource(Resources.CREEDS);        
-                    out.append(creeds);
-                    break;
-                default:
-                    response.setStatus(HttpServletResponse.SC_NOT_FOUND);
-            }
-
-            out.close();
-        }
+        // Check and parse querystring 
+        try {
+            Query query = QueryParser.parse(request.getQueryString());
+            String resource = Resources.getResource(query.getValue());
+            out.append(resource);
+        } catch (NoSuchElementException | IllegalArgumentException ex) {
+            response.setStatus(HttpServletResponse.SC_BAD_REQUEST); 
+        } catch (FileNotFoundException ex) {
+            response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+        } 
+        out.close();
     }
 
     @Override
