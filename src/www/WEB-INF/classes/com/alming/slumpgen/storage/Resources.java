@@ -1,34 +1,25 @@
 package com.alming.slumpgen.storage;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.nio.file.Paths;
-import java.util.stream.Collectors;
+import java.io.PrintWriter;
+import java.util.List;
+import java.util.Map;
+import javax.servlet.*;
+import javax.servlet.http.*;
+
+import com.web.http.Query;
+
 
 public class Resources {
-    public static final String NAMES = "www/WEB-INF/res/names.json";
-    public static final String NICKNAMES = "www/WEB-INF/res/nicknames.json";
-    public static final String CREEDS = "www/WEB-INF/res/creeds.json";
-
-    public static String getResource(String res) throws IllegalArgumentException, FileNotFoundException {
-        switch (res) {
-            case "names":
-                return read(Resources.NAMES);
-            case "nicknames":
-                return read(Resources.NICKNAMES);
-            case "creeds":
-                return read(Resources.CREEDS);        
+    public static Resource getResource(Map<String, Query> queries) {
+        String type = queries.get("type").getValue();
+        String res = queries.get("res").getValue();
+        switch (queries.get("type").getValue()) {
+            case "json":
+                return new JsonResource(res);
+            case "image":
+                return new ImageResource(res);
             default:
-                throw new IllegalArgumentException("No resource");
+                return null;
         }
-    }
-
-    private static String read(String res) throws FileNotFoundException {
-        return new BufferedReader(new FileReader(res))
-            .lines()
-            .collect(Collectors.joining())
-            .toString();
     }
 }

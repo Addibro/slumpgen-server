@@ -20,13 +20,13 @@ public class QueryParser {
 
     private QueryParser() {}
 
-    public static Query parse(String querystring) throws IllegalArgumentException, NoSuchElementException {
-        if (!querystring.matches("^res=[^=]+")) throw new IllegalArgumentException("Illegal argument(s) in query");
-        Optional<Query> queries = Arrays.stream(querystring.split("&"))
+    public static Map<String, Query> parse(String querystring) throws IllegalArgumentException, NoSuchElementException {
+        if (!querystring.matches("^type=[^=]+&res=[^=]+")) throw new IllegalArgumentException("Illegal argument(s) in query");
+        Map<String, Query> queries = Arrays.stream(querystring.split("&"))
             .map(s -> new Query(s.split("=")[0], s.split("=")[1]))
             .filter(valueNotNullOrEmpty())
-            .findFirst();
-        return queries.get();
+            .collect(Collectors.toMap(k -> k.getKey(), v -> v));
+        return queries;
     }
 
     private static Predicate<Query> valueNotNullOrEmpty() {

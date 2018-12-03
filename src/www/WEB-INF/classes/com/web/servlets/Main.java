@@ -14,6 +14,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
 
@@ -23,14 +24,13 @@ import javax.servlet.http.*;
 import org.json.*;
 
 import com.alming.slumpgen.storage.Resources;
+import com.alming.slumpgen.storage.Resource;
 import com.alming.slumpgen.storage.SQLGetCharacters;
 import com.alming.slumpgen.characters.*;
 import com.web.json.FBLCharacterFormatter;
 import com.web.json.FBLCharacterJsonParser;
 import com.web.http.QueryParser;
 import com.web.http.Query;
-
-import static java.nio.charset.StandardCharsets.UTF_8;
 
 public class Main extends HttpServlet {
 
@@ -45,28 +45,17 @@ public class Main extends HttpServlet {
 
         System.out.println("RequestURL(): " + request.getRequestURI());
         System.out.println("Method type: " + request.getMethod());
-
-        // Set request encoding
-        request.setCharacterEncoding(UTF_8.name());
-        // Set content type 
-        response.setContentType("application/json;charset=" + UTF_8.name());
-
-        // setup a output to write the response body
-        PrintWriter out = response.getWriter();      
-        
-        System.out.println(request.getQueryString());
-
+        String querystring = request.getQueryString();
         // Check and parse querystring 
         try {
-            Query query = QueryParser.parse(request.getQueryString());
-            String resource = Resources.getResource(query.getValue());
-            out.append(resource);
+            Map<String, Query> queries = QueryParser.parse(querystring);
+            Resource resource = Resources.getResource(queries);
+            resource.setResponse(response);
         } catch (NoSuchElementException | IllegalArgumentException ex) {
             response.setStatus(HttpServletResponse.SC_BAD_REQUEST); 
         } catch (FileNotFoundException ex) {
             response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
         } 
-        out.close();
     }
 
     @Override
