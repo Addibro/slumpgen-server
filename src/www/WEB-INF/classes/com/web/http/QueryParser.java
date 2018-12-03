@@ -21,7 +21,7 @@ public class QueryParser {
     private QueryParser() {}
 
     public static Query parse(String querystring) throws IllegalArgumentException, NoSuchElementException {
-        if (!querystring.matches("^(res=[^=]+)")) throw new IllegalArgumentException("Illegal argument(s) in query");
+        if (!querystring.matches("^res=[^=]+")) throw new IllegalArgumentException("Illegal argument(s) in query");
         Optional<Query> queries = Arrays.stream(querystring.split("&"))
             .map(s -> new Query(s.split("=")[0], s.split("=")[1]))
             .filter(valueNotNullOrEmpty())
