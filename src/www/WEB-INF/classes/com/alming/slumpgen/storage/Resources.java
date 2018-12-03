@@ -13,7 +13,7 @@ public class Resources {
     public static Resource getResource(Map<String, Query> queries) {
         String type = queries.get("type").getValue();
         String res = queries.get("res").getValue();
-        switch (queries.get("type").getValue()) {
+        switch (type) {
             case "json":
                 return new JsonResource(res);
             case "image":
