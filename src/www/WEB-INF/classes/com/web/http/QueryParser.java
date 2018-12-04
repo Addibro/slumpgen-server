@@ -20,7 +20,7 @@ public class QueryParser {
 
     private QueryParser() {}
 
-    public static Map<String, Query> parse(String querystring) throws IllegalArgumentException, NoSuchElementException {
+    public static Map<String, Query> parse(String querystring) throws IllegalArgumentException {
         if (!querystring.matches("^type=[^=]+&res=[^=]+")) throw new IllegalArgumentException("Illegal argument(s) in query");
         Map<String, Query> queries = Arrays.stream(querystring.split("&"))
             .map(s -> new Query(s.split("=")[0], s.split("=")[1]))

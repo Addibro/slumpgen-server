@@ -45,17 +45,24 @@ public class Main extends HttpServlet {
 
         System.out.println("RequestURL(): " + request.getRequestURI());
         System.out.println("Method type: " + request.getMethod());
+        ServletContext context = getServletContext();
         String querystring = request.getQueryString();
         // Check and parse querystring 
         try {
             Map<String, Query> queries = QueryParser.parse(querystring);
+            System.out.println(queries);
             Resource resource = Resources.getResource(queries);
-            resource.setResponse(response);
-        } catch (NoSuchElementException | IllegalArgumentException ex) {
+            resource.setResponse(response, context);
+        } catch (IllegalArgumentException ex) {
+            System.out.println(ex);
             response.setStatus(HttpServletResponse.SC_BAD_REQUEST); 
         } catch (FileNotFoundException ex) {
+            System.out.println(ex);
             response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-        } 
+        } catch (Exception ex) {
+            System.out.println(ex);
+            response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
+        }
     }
 
     @Override

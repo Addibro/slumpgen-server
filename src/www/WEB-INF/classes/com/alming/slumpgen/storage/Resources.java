@@ -10,7 +10,7 @@ import com.web.http.Query;
 
 
 public class Resources {
-    public static Resource getResource(Map<String, Query> queries) {
+    public static Resource getResource(Map<String, Query> queries) throws IllegalArgumentException {
         String type = queries.get("type").getValue();
         String res = queries.get("res").getValue();
         switch (type) {
@@ -19,7 +19,7 @@ public class Resources {
             case "image":
                 return new ImageResource(res);
             default:
-                return null;
+                throw new IllegalArgumentException("No such type");
         }
     }
 }

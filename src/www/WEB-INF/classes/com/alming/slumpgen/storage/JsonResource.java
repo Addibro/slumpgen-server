@@ -14,7 +14,7 @@ import javax.servlet.http.*;
 
 import static java.nio.charset.StandardCharsets.UTF_8;
 
-public class JsonResource implements Resource {
+public class JsonResource implements Resource<String> {
 
     private String res;
 
@@ -27,7 +27,7 @@ public class JsonResource implements Resource {
     }
 
     @Override
-    public void setResponse(HttpServletResponse response) 
+    public void setResponse(HttpServletResponse response, ServletContext context) 
         throws IllegalArgumentException, FileNotFoundException, IOException {
         // Set content type 
         response.setContentType("application/json;charset=" + UTF_8.name());
@@ -35,7 +35,8 @@ public class JsonResource implements Resource {
         out.append(this.getResource());
     }
 
-    private String getResource() throws IllegalArgumentException, FileNotFoundException {
+    @Override
+    public String getResource() throws IllegalArgumentException, FileNotFoundException, IOException {
         switch (this.res) {
             case "names":
                 return read(JsonResource.NAMES);
@@ -44,7 +45,7 @@ public class JsonResource implements Resource {
             case "creeds":
                 return read(JsonResource.CREEDS);        
             default:
-                throw new IllegalArgumentException("No resource");
+                throw new IllegalArgumentException("No such resource");
         }
     }
 

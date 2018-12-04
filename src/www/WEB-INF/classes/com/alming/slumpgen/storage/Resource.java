@@ -12,6 +12,7 @@ import java.util.stream.Collectors;
 import javax.servlet.*;
 import javax.servlet.http.*;
 
-public interface Resource {
-    void setResponse(HttpServletResponse response) throws IllegalArgumentException, FileNotFoundException, IOException;
+public interface Resource<T> {
+    void setResponse(HttpServletResponse response, ServletContext context) throws IllegalArgumentException, FileNotFoundException, IOException;
+    T getResource() throws IllegalArgumentException, FileNotFoundException, IOException;
 }

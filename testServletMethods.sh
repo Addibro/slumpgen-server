@@ -10,4 +10,10 @@ RES=$2
 echo -e "\n\n--- Testing doGet using localhost:8080/characters/fetch?type=$TYPE&res=$RES ---\n\n"
 sleep 1
 # need to quote it since shell sees & as the end of the command
-curl -s "http://localhost:8080/characters/fetch?type=$TYPE&res=$RES" | jq
+if [[ TYPE -eq "image" ]]
+then
+    curl -s "http://localhost:8080/characters/fetch?type=$TYPE&res=$RES"
+elif [[ TYPE -eq "json" ]]
+then
+    curl -s "http://localhost:8080/characters/fetch?type=$TYPE&res=$RES" | jq
+fi
