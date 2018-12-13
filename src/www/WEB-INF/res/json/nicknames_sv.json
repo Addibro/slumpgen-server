@@ -14,12 +14,13 @@
             "veder", "sannings", ""],
         "suffix": ["blödare", "slaktare", "vittra", "offrare", "mask", "klot", "gissel",
             "piska", "spö", "flagell", "späkare", "plåga", "pina", "martyr", "hunsare",
-            "tuktare", "hämnare", "salig", "sällad", "frälst"]
+            "tuktare", "hämnare", "salig", "sällad", "frälst", "man", "son"]
     },{
     "kins": [],
     "creeds": ["korpsyster", "svartvinge"],
     "prefix": ["korp", "kråk", "fågel", "trast"],
-    "suffix": ["vinge", "blödare", "fjäder", "kall", "kättare", "klo", "sökare", "farare"]
+    "suffix": ["vinge", "blödare", "fjäder", "kall", "kättare", "klo", "sökare", "farare",
+    "dotter", "mö"]
     },{
     "kins": [],
     "creeds": ["svartvinge"],
@@ -29,18 +30,18 @@
         "kins": ["alderlänning", "klener"],
         "creeds": [],
         "prefix": ["alder"],
-        "suffix": ["karl", "man", "kvinna", "mö", "son", "dotter"]
+        "suffix": ["länning"]
     },{
         "kins": ["aslen"],
         "creeds": ["ryttare"],
         "prefix": ["häst", "horn", "hov", "halm", "töm", "rem", "tygel", "träns", "spjut"],
         "suffix": ["slagare", "sporre", "sadel", "ryttare", "travare", "dragare", "kuse", "märr", "hingst",
-            "springare", "bets", "lans", "stöt", "stötare", "blåsare"]
+            "springare", "bets", "lans", "stöt", "stötare", "blåsare", "skägg", "fläta", "broms"]
     },{
         "kins": [],
         "creeds": ["tjuv", "rövare"],
-        "prefix": ["smuts", "stövel", "guld", "penga", "kniv", "fick", "röv"],
-        "suffix": ["hand", "pung", "roffare", "rövare", "stövel", "fot", "kniv", "dolk", "balle", "snyting"]
+        "prefix": ["smuts", "stövel", "guld", "penga", "kniv", "fick"],
+        "suffix": ["hand", "pung", "roffare", "rövare", "stövel", "fot", "kniv", "dolk", "snyting"]
     },{
         "kins": [],
         "creeds": ["jägare"],
@@ -49,5 +50,15 @@
         "suffix": ["stigare", "stegare", "stige", "björn", "päls", "båge", "skytt", "skytten",
             "vandrare", "läder", "träd", "garvare", "brasa", "lund", "dunge", "hult", "backe", "hage",
             "strävare", "fångst", "fä", "bamse", "vide", "fälla", "snara", "sax", "buske"]
+    },{
+    "kins": [],
+    "creeds": ["nasare"],
+    "prefix": ["guld", "silver", "silkes", "siden", "flis", "klöver", "grus", "knaper", "lus", "ädel",
+        "gull", "gyllen", "flät", "slät", "päls", "järn", "trä", "läder", "skinn", "sten",
+        "glas", "tyg", "bröd", "talg", "ört", "mässings"],
+    "suffix": ["smil", "pung", "kosing", "schackrare", "handlare", "knackare", "kula", "slant",
+        "pluring", "rik", "slant", "pank", "sutten", "halt", "burgen", "späckad", "mynt", "flin",
+        "grin", "gåva", "gärd", "sold", "säck", "ränsel", "packare", "påse", "korg", "bagge",
+        "tupp", "malm", "mark"]
     }
 ]

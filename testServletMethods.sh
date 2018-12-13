@@ -15,5 +15,5 @@ then
     curl -s "http://localhost:8080/characters/fetch?type=$TYPE&res=$RES"
 elif [[ TYPE -eq "json" ]]
 then
-    curl -s "http://localhost:8080/characters/fetch?type=$TYPE&res=$RES" | jq
+    curl "http://localhost:8080/characters/fetch?type=$TYPE&res=$RES" | jq
 fi

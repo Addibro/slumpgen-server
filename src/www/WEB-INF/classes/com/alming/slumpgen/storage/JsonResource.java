@@ -17,10 +17,7 @@ import static java.nio.charset.StandardCharsets.UTF_8;
 public class JsonResource implements Resource<String> {
 
     private String res;
-
-    public static final String NAMES = "www/WEB-INF/res/json/names.json";
-    public static final String NICKNAMES = "www/WEB-INF/res/json/nicknames.json";
-    public static final String CREEDS = "www/WEB-INF/res/json/creeds.json";
+    public static final String PATH = "www/WEB-INF/res/json/";
 
     public JsonResource(String res) {
         this.res = res;
@@ -37,16 +34,7 @@ public class JsonResource implements Resource<String> {
 
     @Override
     public String getResource() throws IllegalArgumentException, FileNotFoundException, IOException {
-        switch (this.res) {
-            case "names":
-                return read(JsonResource.NAMES);
-            case "nicknames":
-                return read(JsonResource.NICKNAMES);
-            case "creeds":
-                return read(JsonResource.CREEDS);        
-            default:
-                throw new IllegalArgumentException("No such resource");
-        }
+        return read(PATH + this.res);
     }
 
     private String read(String res) throws FileNotFoundException {

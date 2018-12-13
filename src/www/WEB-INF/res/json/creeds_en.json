@@ -1,0 +1,90 @@
+[
+    {
+      "name": "bandit",
+      "kins": [
+        "alderlander",
+        "ailander",
+        "aslene",
+        "elvenspring",
+        "frailer"
+      ],
+      "attributes": [
+        {
+          "name": "strength",
+          "min": 2,
+          "max": 4
+        },
+        {
+          "name": "agility",
+          "min": 2,
+          "max": 4
+        },
+        {
+          "name": "wits",
+          "min": 2,
+          "max": 4
+        },
+        {
+          "name": "empathy",
+          "min": 2,
+          "max": 3
+        }
+      ],
+      "skills": [
+        {
+          "name": "melee",
+          "min": 0,
+          "max": 3
+        },
+        {
+          "name": "marksmanship",
+          "min": 0,
+          "max": 3
+        },
+        {
+          "name": "survival",
+          "min": 0,
+          "max": 3
+        }
+      ],
+      "talents": [],
+      "gear": {
+        "primary_weapon": [
+          {
+            "name": "broadsword"
+          },
+          {
+            "name": "handaxe"
+          },
+          {
+            "name": "shortsword"
+          }
+        ],
+        "secondary_weapon": [
+          {},
+          {
+            "name": "sling"
+          },
+          {
+            "name": "shortbow"
+          }
+        ],
+        "body": [
+          {},
+          {
+            "name": "leather armor"
+          },
+          {
+            "name": "studded leather armor"
+          }
+        ]
+      },
+      "purse": [
+        {
+          "denomination": "copper",
+          "min": 0,
+          "max": 12
+        }
+      ]
+    }
+]
