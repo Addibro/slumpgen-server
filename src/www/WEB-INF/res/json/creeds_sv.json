@@ -1,988 +1,991 @@
 [
-    {
-      "name": "rövare",
-      "kins": [
-        "alderlänning",
-        "eländer",
-        "aslen"
-      ],
-      "attributes": [
-        {
-          "name": "styrka",
-          "min": 2,
-          "max": 4
-        },
-        {
-          "name": "smidighet",
-          "min": 2,
-          "max": 4
-        },
-        {
-          "name": "intelligens",
-          "min": 2,
-          "max": 4
-        },
-        {
-          "name": "karisma",
-          "min": 2,
-          "max": 3
-        }
-      ],
-      "skills": [
-        {
-          "name": "närkamp",
-          "min": 0,
-          "max": 3
-        },
-        {
-          "name": "skytte",
-          "min": 0,
-          "max": 3
-        },
-        {
-          "name": "överlevnad",
-          "min": 0,
-          "max": 3
-        }
-      ],
-      "talents": [],
-      "gear": {
-        "primary_weapon": [
-          {
-            "name": "bredsvärd"
-          },
-          {
-            "name": "handyxa"
-          },
-          {
-            "name": "kortsvärd"
-          }
-        ],
-        "secondary_weapon": [
-          {},
-          {
-            "name": "slunga"
-          },
-          {
-            "name": "kortbåge"
-          }
-        ],
-        "body": [
-          {},
-          {
-            "name": "läderrustning"
-          },
-          {
-            "name": "nitläderrustning"
-          }
-        ]
+  {
+    "name": "rövare",
+    "kins": [
+      "alderlänning",
+      "eländer",
+      "aslen",
+      "orch",
+      "svartalf",
+      "halvling",
+      "klener",
+      "kanid",
+      "vargfolk"
+    ],
+    "attributes": [
+      {
+        "name": "styrka",
+        "min": 2,
+        "max": 4
       },
-      "purse": [
+      {
+        "name": "smidighet",
+        "min": 2,
+        "max": 4
+      },
+      {
+        "name": "intelligens",
+        "min": 2,
+        "max": 4
+      },
+      {
+
+        "name": "karisma",
+        "min": 2,
+        "max": 3
+      }
+    ],
+    "skills": [
+      {
+        "name": "närkamp",
+        "min": 0,
+        "max": 3
+      },
+      {
+        "name": "skytte",
+        "min": 0,
+        "max": 3
+      },
+      {
+        "name": "överlevnad",
+        "min": 0,
+        "max": 3
+      }
+    ],
+    "talents": [],
+    "gear": {
+      "primary_weapon": [
         {
-          "denomination": "koppar",
-          "min": 0,
-          "max": 12
+          "name": "bredsvärd"
+        },
+        {
+          "name": "handyxa"
+        },
+        {
+          "name": "kortsvärd"
+        }
+      ],
+      "secondary_weapon": [
+        {},
+        {
+          "name": "slunga"
+        },
+        {
+          "name": "kortbåge"
+        }
+      ],
+      "body": [
+        {},
+        {
+          "name": "läderrustning"
+        },
+        {
+          "name": "nitläderrustning"
         }
       ]
     },
-    {
-      "name": "soldat",
-      "kins": [
-        "alderlänning",
-        "aslen"
-      ],
-      "attributes": [
-        {
-          "name": "styrka",
-          "min": 2,
-          "max": 5
-        },
-        {
-          "name": "smidighet",
-          "min": 2,
-          "max": 4
-        },
-        {
-          "name": "intelligens",
-          "min": 2,
-          "max": 3
-        },
-        {
-          "name": "karisma",
-          "min": 2,
-          "max": 3
-        }
-      ],
-      "skills": [
-        {
-          "name": "uthållighet",
-          "min": 1,
-          "max": 3
-        },
-        {
-          "name": "närkamp",
-          "min": 1,
-          "max": 4
-        },
-        {
-          "name": "skytte",
-          "min": 1,
-          "max": 3
-        },
-        {
-          "name": "överlevnad",
-          "min": 0,
-          "max": 2
-        }
-      ],
-      "talents": [
-        [
-          {
-            "name": "klingans väg",
-            "min": 0,
-            "max": 1
-          },
-          {
-            "name": "sköldens väg",
-            "min": 0,
-            "max": 1
-          }
-        ],
-        [
-          {
-            "name": "spjutkämpe",
-            "min": 0,
-            "max": 2
-          },
-          {
-            "name": "svärdskämpe",
-            "min": 0,
-            "max": 2
-          },
-          {
-            "name": "yxkämpe",
-            "min": 0,
-            "max": 2
-          }
-        ]
-      ],
-      "gear": {
-        "primary_weapon": [
-          {
-            "name": "bredsvärd"
-          },
-          {
-            "name": "slagssvärd"
-          },
-          {
-            "name": "stridsyxa"
-          }
-        ],
-        "secondary_weapon": [
-          {},
-          {
-            "name": "spjut"
-          },
-          {
-            "name": "långbåge"
-          },
-          {
-            "name": "kortbåge"
-          }
-        ],
-        "body": [
-          {
-            "name": "läderrustning"
-          },
-          {
-            "name": "ringbrynja"
-          }
-        ],
-        "head": [
-          {
-            "name": "öppen hjälm"
-          }
-        ],
-        "other": [
-          {},
-          {
-            "name": "liten sköld"
-          },
-          {
-            "name": "stor sköld"
-          }
-        ]
+    "purse": [
+      {
+        "denomination": "koppar",
+        "min": 0,
+        "max": 12
+      }
+    ]
+  },
+  {
+    "name": "soldat",
+    "kins": [
+      "alderlänning",
+      "aslen",
+      "dvärg",
+      "eländer",
+      "orch"
+    ],
+    "attributes": [
+      {
+        "name": "styrka",
+        "min": 2,
+        "max": 5
       },
-      "purse": [
+      {
+        "name": "smidighet",
+        "min": 2,
+        "max": 4
+      },
+      {
+        "name": "intelligens",
+        "min": 2,
+        "max": 3
+      },
+      {
+        "name": "karisma",
+        "min": 2,
+        "max": 3
+      }
+    ],
+    "skills": [
+      {
+        "name": "uthållighet",
+        "min": 1,
+        "max": 3
+      },
+      {
+        "name": "närkamp",
+        "min": 1,
+        "max": 4
+      },
+      {
+        "name": "skytte",
+        "min": 1,
+        "max": 3
+      },
+      {
+        "name": "överlevnad",
+        "min": 0,
+        "max": 2
+      }
+    ],
+    "talents": [
+      [
         {
-          "denomination": "silver",
+          "name": "klingans väg",
           "min": 0,
           "max": 1
         },
         {
-          "denomination": "koppar",
+          "name": "sköldens väg",
           "min": 0,
-          "max": 12
+          "max": 1
+        }
+      ],
+      [
+        {
+          "name": "spjutkämpe",
+          "min": 0,
+          "max": 2
+        },
+        {
+          "name": "svärdskämpe",
+          "min": 0,
+          "max": 2
+        },
+        {
+          "name": "yxkämpe",
+          "min": 0,
+          "max": 2
+        }
+      ]
+    ],
+    "gear": {
+      "primary_weapon": [
+        {
+          "name": "bredsvärd"
+        },
+        {
+          "name": "slagsvärd"
+        },
+        {
+          "name": "stridsyxa"
+        }
+      ],
+      "secondary_weapon": [
+        {},
+        {
+          "name": "spjut"
+        },
+        {
+          "name": "långbåge"
+        },
+        {
+          "name": "kortbåge"
+        }
+      ],
+      "body": [
+        {
+          "name": "läderrustning"
+        },
+        {
+          "name": "ringbrynja"
+        }
+      ],
+      "head": [
+        {
+          "name": "öppen hjälm"
+        }
+      ],
+      "other": [
+        {},
+        {
+          "name": "liten sköld"
+        },
+        {
+          "name": "stor sköld"
         }
       ]
     },
-    {
-      "name": "ryttare",
-      "kins": [
-        "alderlänning",
-        "aslen"
-      ],
-      "attributes": [
+    "purse": [
+      {
+        "denomination": "silver",
+        "min": 0,
+        "max": 1
+      },
+      {
+        "denomination": "koppar",
+        "min": 0,
+        "max": 12
+      }
+    ]
+  },
+  {
+    "name": "ryttare",
+    "kins": [
+      "alderlänning",
+      "aslen",
+      "dvärg"
+    ],
+    "attributes": [
+      {
+        "name": "styrka",
+        "min": 2,
+        "max": 5
+      },
+      {
+        "name": "smidighet",
+        "min": 2,
+        "max": 4
+      },
+      {
+        "name": "intelligens",
+        "min": 2,
+        "max": 3
+      },
+      {
+        "name": "karisma",
+        "min": 2,
+        "max": 3
+      }
+    ],
+    "skills": [
+      {
+        "name": "närkamp",
+        "min": 1,
+        "max": 4
+      },
+      {
+        "name": "skytte",
+        "min": 0,
+        "max": 3
+      },
+      {
+        "name": "överlevnad",
+        "min": 1,
+        "max": 2
+      },
+      {
+        "name": "djurhantering",
+        "min": 1,
+        "max": 3
+      }
+    ],
+    "talents": [
+      [
         {
-          "name": "styrka",
-          "min": 2,
-          "max": 5
-        },
-        {
-          "name": "smidighet",
-          "min": 2,
-          "max": 4
-        },
-        {
-          "name": "intelligens",
-          "min": 2,
-          "max": 3
-        },
-        {
-          "name": "karisma",
-          "min": 2,
-          "max": 3
+          "name": "riddarens väg",
+          "min": 0,
+          "max": 1
         }
       ],
-      "skills": [
+      [
         {
-          "name": "närkamp",
-          "min": 1,
-          "max": 4
-        },
-        {
-          "name": "skytte",
+          "name": "ryttarkämpe",
           "min": 0,
-          "max": 3
-        },
-        {
-          "name": "överlevnad",
-          "min": 1,
           "max": 2
         },
         {
-          "name": "djurhantering",
-          "min": 1,
-          "max": 3
+          "name": "svärdskämpe",
+          "min": 0,
+          "max": 2
+        },
+        {
+          "name": "spjutkämpe",
+          "min": 0,
+          "max": 2
+        }
+      ]
+    ],
+    "gear": {
+      "primary_weapon": [
+        {
+          "name": "bredsvärd"
+        },
+        {
+          "name": "kortspjut"
         }
       ],
-      "talents": [
-        [
-          {
-            "name": "riddarens väg",
-            "min": 0,
-            "max": 1
-          }
-        ],
-        [
-          {
-            "name": "ryttarkämpe",
-            "min": 0,
-            "max": 2
-          },
-          {
-            "name": "svärdskämpe",
-            "min": 0,
-            "max": 2
-          },
-          {
-            "name": "spjutkämpe",
-            "min": 0,
-            "max": 2
-          }
-        ]
-      ],
-      "gear": {
-        "primary_weapon": [
-          {
-            "name": "bredsvärd"
-          },
-          {
-            "name": "kortspjut"
-          }
-        ],
-        "secondary_weapon": [
-          {},
-          {
-            "name": "dolk"
-          },
-          {
-            "name": "kortbåge"
-          }
-        ],
-        "body": [
-          {},
-          {
-            "name": "läderrustning"
-          },
-          {
-            "name": "nitläderrustning"
-          },
-          {
-            "name": "ringbrynja"
-          }
-        ],
-        "head": [
-          {},
-          {
-            "name": "öppen hjälm"
-          }
-        ],
-        "other": [
-          {},
-          {
-            "name": "liten sköld"
-          }
-        ],
-        "mount": [
-          {
-            "name": "ridhäst"
-          }
-        ]
-      },
-      "purse": [
+      "secondary_weapon": [
+        {},
         {
-          "denomination": "koppar",
-          "min": 0,
-          "max": 12
+          "name": "dolk"
+        },
+        {
+          "name": "kortbåge"
+        }
+      ],
+      "body": [
+        {},
+        {
+          "name": "läderrustning"
+        },
+        {
+          "name": "nitläderrustning"
+        },
+        {
+          "name": "ringbrynja"
+        }
+      ],
+      "head": [
+        {},
+        {
+          "name": "öppen hjälm"
+        }
+      ],
+      "other": [
+        {},
+        {
+          "name": "liten sköld"
+        }
+      ],
+      "mount": [
+        {
+          "name": "ridhäst"
         }
       ]
     },
-    {
-      "name": "tjuv",
-      "kins": [
-        "alderlänning",
-        "klener"
-      ],
-      "attributes": [
-        {
-          "name": "styrka",
-          "min": 2,
-          "max": 3
-        },
-        {
-          "name": "smidighet",
-          "min": 3,
-          "max": 5
-        },
-        {
-          "name": "intelligens",
-          "min": 2,
-          "max": 3
-        },
-        {
-          "name": "karisma",
-          "min": 2,
-          "max": 4
-        }
-      ],
-      "skills": [
-        {
-          "name": "smyga",
-          "min": 1,
-          "max": 2
-        },
-        {
-          "name": "fingerfärdighet",
-          "min": 1,
-          "max": 2
-        },
-        {
-          "name": "rörlighet",
-          "min": 1,
-          "max": 3
-        },
-        {
-          "name": "närkamp",
-          "min": 0,
-          "max": 3
-        },
-        {
-          "name": "skytte",
-          "min": 0,
-          "max": 3
-        }
-      ],
-      "talents": [
-        [
-          {
-            "name": "ansiktets väg",
-            "min": 0,
-            "max": 1
-          }
-        ],
-        [
-          {},
-          {
-            "name": "blixtsnabb",
-            "min": 0,
-            "max": 2
-          },
-          {
-            "name": "hal som en ål",
-            "min": 0,
-            "max": 2
-          },
-          {
-            "name": "snabbdrag",
-            "min": 0,
-            "max": 2
-          },
-          {
-            "name": "stadig på foten",
-            "min": 0,
-            "max": 2
-          },
-          {
-            "name": "låsdyrkare",
-            "min": 0,
-            "max": 2
-          },
-          {
-            "name": "knivkämpe",
-            "min": 0,
-            "max": 2
-          },
-          {
-            "name": "dubbelhänt",
-            "min": 0,
-            "max": 2
-          }
-        ]
-      ],
-      "gear": {
-        "primary_weapon": [
-          {
-            "name": "kniv"
-          },
-          {
-            "name": "dolk"
-          },
-          {
-            "name": "två dolkar"
-          },
-          {
-            "name": "två knivar"
-          }
-        ],
-        "secondary_weapon": [
-          {},
-          {
-            "name": "kastkniv"
-          },
-          {
-            "name": "slunga"
-          }
-        ],
-        "body": [
-          {},
-          {
-            "name": "läderrustning"
-          }
-        ],
-        "other": [
-          {},
-          {
-            "name": "dyrkar"
-          }
-        ]
+    "purse": [
+      {
+        "denomination": "koppar",
+        "min": 0,
+        "max": 12
+      }
+    ]
+  },
+  {
+    "name": "tjuv",
+    "kins": [
+      "alderlänning",
+      "klener",
+      "halvling",
+      "svartalf"
+    ],
+    "attributes": [
+      {
+        "name": "styrka",
+        "min": 2,
+        "max": 3
       },
-      "purse": [
+      {
+        "name": "smidighet",
+        "min": 3,
+        "max": 5
+      },
+      {
+        "name": "intelligens",
+        "min": 2,
+        "max": 3
+      },
+      {
+        "name": "karisma",
+        "min": 2,
+        "max": 4
+      }
+    ],
+    "skills": [
+      {
+        "name": "smyga",
+        "min": 1,
+        "max": 2
+      },
+      {
+        "name": "fingerfärdighet",
+        "min": 1,
+        "max": 2
+      },
+      {
+        "name": "rörlighet",
+        "min": 1,
+        "max": 3
+      },
+      {
+        "name": "närkamp",
+        "min": 0,
+        "max": 3
+      },
+      {
+        "name": "skytte",
+        "min": 0,
+        "max": 3
+      }
+    ],
+    "talents": [
+      [
         {
-          "denomination": "koppar",
+          "name": "ansiktets väg",
           "min": 0,
-          "max": 24
+          "max": 1
+        }
+      ],
+      [
+        {},
+        {
+          "name": "blixtsnabb",
+          "min": 0,
+          "max": 2
+        },
+        {
+          "name": "hal som en ål",
+          "min": 0,
+          "max": 2
+        },
+        {
+          "name": "snabbdrag",
+          "min": 0,
+          "max": 2
+        },
+        {
+          "name": "stadig på foten",
+          "min": 0,
+          "max": 2
+        },
+        {
+          "name": "låsdyrkare",
+          "min": 0,
+          "max": 2
+        },
+        {
+          "name": "knivkämpe",
+          "min": 0,
+          "max": 2
+        },
+        {
+          "name": "dubbelhänt",
+          "min": 0,
+          "max": 2
+        }
+      ]
+    ],
+    "gear": {
+      "primary_weapon": [
+        {
+          "name": "kniv"
+        },
+        {
+          "name": "dolk"
+        },
+        {
+          "name": "två dolkar"
+        },
+        {
+          "name": "två knivar"
+        }
+      ],
+      "secondary_weapon": [
+        {},
+        {
+          "name": "kastkniv"
+        },
+        {
+          "name": "slunga"
+        }
+      ],
+      "body": [
+        {},
+        {
+          "name": "läderrustning"
+        }
+      ],
+      "other": [
+        {},
+        {
+          "name": "dyrkar"
         }
       ]
     },
-    {
-      "name": "jägare",
-      "kins": [
-        "alderlänning",
-        "älvestamling",
-        "aslen"
-      ],
-      "attributes": [
+    "purse": [
+      {
+        "denomination": "koppar",
+        "min": 0,
+        "max": 24
+      }
+    ]
+  },
+  {
+    "name": "jägare",
+    "kins": [
+      "alderlänning",
+      "älvestamling",
+      "aslen",
+      "alv",
+      "kanid",
+      "svartalf",
+      "vargfolk"
+    ],
+    "attributes": [
+      {
+        "name": "styrka",
+        "min": 2,
+        "max": 4
+      },
+      {
+        "name": "smidighet",
+        "min": 2,
+        "max": 5
+      },
+      {
+        "name": "intelligens",
+        "min": 2,
+        "max": 3
+      },
+      {
+        "name": "karisma",
+        "min": 2,
+        "max": 3
+      }
+    ],
+    "skills": [
+      {
+        "name": "närkamp",
+        "min": 0,
+        "max": 2
+      },
+      {
+        "name": "skytte",
+        "min": 1,
+        "max": 4
+      },
+      {
+        "name": "speja",
+        "min": 0,
+        "max": 3
+      },
+      {
+        "name": "överlevnad",
+        "min": 1,
+        "max": 3
+      },
+      {
+        "name": "djurhantering",
+        "min": 0,
+        "max": 3
+      }
+    ],
+    "talents": [
+      [
         {
-          "name": "styrka",
-          "min": 2,
-          "max": 4
+          "name": "skogens väg",
+          "min": 0,
+          "max": 1
         },
         {
-          "name": "smidighet",
-          "min": 2,
-          "max": 5
-        },
-        {
-          "name": "intelligens",
-          "min": 2,
-          "max": 3
-        },
-        {
-          "name": "karisma",
-          "min": 2,
-          "max": 3
+          "name": "pilens väg",
+          "min": 0,
+          "max": 1
         }
       ],
-      "skills": [
+      [
         {
-          "name": "närkamp",
+          "name": "vandrare",
           "min": 0,
           "max": 2
         },
         {
-          "name": "skytte",
-          "min": 1,
-          "max": 4
+          "name": "stigfinnare",
+          "min": 0,
+          "max": 2
         },
         {
-          "name": "speja",
-          "min": 1,
+          "name": "snabbdrag",
+          "min": 0,
+          "max": 2
+        },
+        {
+          "name": "stadig på foten",
+          "min": 0,
+          "max": 2
+        },
+        {
+          "name": "snabbskytt",
+          "min": 0,
+          "max": 2
+        },
+        {
+          "name": "fiskare",
+          "min": 0,
+          "max": 2
+        },
+        {
+          "name": "ögon i nacken",
+          "min": 0,
+          "max": 2
+        },
+        {
+          "name": "örtakännare",
+          "min": 0,
+          "max": 2
+        },
+        {
+          "name": "jaktmästare",
+          "min": 0,
+          "max": 2
+        },
+        {
+          "name": "kvartermästare",
+          "min": 0,
           "max": 3
         },
         {
-          "name": "överlevnad",
-          "min": 1,
+          "name": "kock",
+          "min": 0,
           "max": 3
         },
         {
-          "name": "djurhantering",
-          "min": 1,
+          "name": "garvare",
+          "min": 0,
+          "max": 3
+        },
+        {
+          "name": "bågmakare",
+          "min": 0,
           "max": 3
         }
-      ],
-      "talents": [
-        [
-          {
-            "name": "skogens väg",
-            "min": 0,
-            "max": 1
-          },
-          {
-            "name": "pilens väg",
-            "min": 0,
-            "max": 1
-          }
-        ],
-        [
-          {
-            "name": "vandrare",
-            "min": 0,
-            "max": 2
-          },
-          {
-            "name": "stigfinnare",
-            "min": 0,
-            "max": 2
-          },
-          {
-            "name": "snabbdrag",
-            "min": 0,
-            "max": 2
-          },
-          {
-            "name": "stadig på foten",
-            "min": 0,
-            "max": 2
-          },
-          {
-            "name": "snabbskytt",
-            "min": 0,
-            "max": 2
-          },
-          {
-            "name": "fiskare",
-            "min": 0,
-            "max": 2
-          },
-          {
-            "name": "ögon i nacken",
-            "min": 0,
-            "max": 2
-          },
-          {
-            "name": "örtakännare",
-            "min": 0,
-            "max": 2
-          },
-          {
-            "name": "jaktmästare",
-            "min": 0,
-            "max": 2
-          },
-          {
-            "name": "kvartermästare",
-            "min": 0,
-            "max": 3
-          },
-          {
-            "name": "kock",
-            "min": 0,
-            "max": 3
-          },
-          {
-            "name": "garvare",
-            "min": 0,
-            "max": 3
-          },
-          {
-            "name": "bågmakare",
-            "min": 0,
-            "max": 3
-          }
-        ]
-      ],
-      "gear": {
-        "primary_weapon": [
-          {
-            "name": "kniv"
-          },
-          {
-            "name": "dolk"
-          },
-          {
-            "name": "kortsvärd"
-          },
-          {
-            "name": "handyxa"
-          }
-        ],
-        "secondary_weapon": [
-          {
-            "name": "slunga"
-          },
-          {
-            "name": "kortbåge"
-          },
-          {
-            "name": "långbåge"
-          },
-          {
-            "name": "kastspjut"
-          }
-        ],
-        "body": [
-          {},
-          {
-            "name": "läderrustning"
-          }
-        ],
-        "other": [
-          {},
-          {
-            "name": "päls"
-          },
-          {
-            "name": "litet tält"
-          },
-          {
-            "name": "sovfäll"
-          }
-        ]
-      },
-      "purse": [
+      ]
+    ],
+    "gear": {
+      "primary_weapon": [
         {
-          "denomination": "koppar",
-          "min": 0,
-          "max": 6
+          "name": "kniv"
+        },
+        {
+          "name": "dolk"
+        },
+        {
+          "name": "kortsvärd"
+        },
+        {
+          "name": "handyxa"
+        }
+      ],
+      "secondary_weapon": [
+        {
+          "name": "slunga"
+        },
+        {
+          "name": "kortbåge"
+        },
+        {
+          "name": "långbåge"
+        },
+        {
+          "name": "kastspjut"
+        }
+      ],
+      "body": [
+        {},
+        {
+          "name": "läderrustning"
+        }
+      ],
+      "other": [
+        {},
+        {
+          "name": "päls"
+        },
+        {
+          "name": "litet tält"
+        },
+        {
+          "name": "sovfäll"
         }
       ]
     },
-    {
-      "name": "korpsyster",
-      "kins": [
-        "eländer"
-      ],
-      "attributes": [
-        {
-          "name": "styrka",
-          "min": 2,
-          "max": 3
-        },
-        {
-          "name": "smidighet",
-          "min": 2,
-          "max": 3
-        },
-        {
-          "name": "intelligens",
-          "min": 2,
-          "max": 4
-        },
-        {
-          "name": "karisma",
-          "min": 2,
-          "max": 5
-        }
-      ],
-      "skills": [
-        {
-          "name": "närkamp",
-          "min": 0,
-          "max": 3
-        },
-        {
-          "name": "rörlighet",
-          "min": 0,
-          "max": 2
-        },
-        {
-          "name": "skytte",
-          "min": 0,
-          "max": 3
-        },
-        {
-          "name": "bildning",
-          "min": 0,
-          "max": 3
-        },
-        {
-          "name": "överlevnad",
-          "min": 0,
-          "max": 2
-        },
-        {
-          "name": "genomskåda",
-          "min": 0,
-          "max": 3
-        },
-        {
-          "name": "manipulera",
-          "min": 0,
-          "max": 2
-        },
-        {
-          "name": "läkekonst",
-          "min": 0,
-          "max": 4
-        }
-      ],
-      "talents": [
-        [
-          {
-            "name": "helandets väg",
-            "min": 0,
-            "max": 3
-          },
-          {
-            "name": "hamnskiftets väg",
-            "min": 0,
-            "max": 3
-          },
-          {
-            "name": "synens väg",
-            "min": 0,
-            "max": 3
-          }
-        ],
-        [
-          {
-            "name": "ögon i nacken",
-            "min": 0,
-            "max": 2
-          },
-          {
-            "name": "vandrare",
-            "min": 0,
-            "max": 2
-          },
-          {
-            "name": "örtakännare",
-            "min": 0,
-            "max": 2
-          }
-        ]
-      ],
-      "gear": {
-        "primary_weapon": [
-          {
-            "name": "stav"
-          },
-          {}
-        ],
-        "secondary_weapon": [
-          {},
-          {
-            "name": "dolk"
-          }
-        ]
+    "purse": [
+      {
+        "denomination": "koppar",
+        "min": 0,
+        "max": 6
+      }
+    ]
+  },
+  {
+    "name": "korpsyster",
+    "kins": [
+      "eländer"
+    ],
+    "attributes": [
+      {
+        "name": "styrka",
+        "min": 2,
+        "max": 3
       },
-      "purse": [
+      {
+        "name": "smidighet",
+        "min": 2,
+        "max": 3
+      },
+      {
+        "name": "intelligens",
+        "min": 2,
+        "max": 4
+      },
+      {
+        "name": "karisma",
+        "min": 2,
+        "max": 5
+      }
+    ],
+    "skills": [
+      {
+        "name": "närkamp",
+        "min": 0,
+        "max": 3
+      },
+      {
+        "name": "rörlighet",
+        "min": 0,
+        "max": 2
+      },
+      {
+        "name": "skytte",
+        "min": 0,
+        "max": 3
+      },
+      {
+        "name": "bildning",
+        "min": 0,
+        "max": 3
+      },
+      {
+        "name": "överlevnad",
+        "min": 0,
+        "max": 2
+      },
+      {
+        "name": "genomskåda",
+        "min": 0,
+        "max": 3
+      },
+      {
+        "name": "manipulera",
+        "min": 0,
+        "max": 2
+      },
+      {
+        "name": "läkekonst",
+        "min": 0,
+        "max": 4
+      }
+    ],
+    "talents": [
+      [
         {
-          "denomination": "koppar",
+          "name": "helandets väg",
+          "min": 1,
+          "max": 3
+        },
+        {
+          "name": "hamnskiftets väg",
+          "min": 1,
+          "max": 3
+        },
+        {
+          "name": "synens väg",
+          "min": 1,
+          "max": 3
+        }
+      ],
+      [
+        {
+          "name": "ögon i nacken",
           "min": 0,
-          "max": 6
+          "max": 2
+        },
+        {
+          "name": "vandrare",
+          "min": 0,
+          "max": 2
+        },
+        {
+          "name": "örtakännare",
+          "min": 0,
+          "max": 2
+        }
+      ]
+    ],
+    "gear": {
+      "primary_weapon": [
+        {
+          "name": "stav"
+        },
+        {}
+      ],
+      "secondary_weapon": [
+        {},
+        {
+          "name": "dolk"
         }
       ]
     },
-    {
-      "name": "svartvinge",
-      "kins": [
-        "eländer"
-      ],
-      "attributes": [
+    "purse": [
+      {
+        "denomination": "koppar",
+        "min": 0,
+        "max": 6
+      }
+    ]
+  },
+  {
+    "name": "svartvinge",
+    "kins": [
+      "eländer"
+    ],
+    "attributes": [
+      {
+        "name": "styrka",
+        "min": 2,
+        "max": 4
+      },
+      {
+        "name": "smidighet",
+        "min": 2,
+        "max": 5
+      },
+      {
+        "name": "intelligens",
+        "min": 2,
+        "max": 3
+      },
+      {
+        "name": "karisma",
+        "min": 2,
+        "max": 3
+      }
+    ],
+    "skills": [
+      {
+        "name": "närkamp",
+        "min": 1,
+        "max": 4
+      },
+      {
+        "name": "smyga",
+        "min": 1,
+        "max": 3
+      },
+      {
+        "name": "skytte",
+        "min": 0,
+        "max": 5
+      },
+      {
+        "name": "överlevnad",
+        "min": 0,
+        "max": 3
+      },
+      {
+        "name": "manipulera",
+        "min": 0,
+        "max": 3
+      }
+    ],
+    "talents": [
+      [
         {
-          "name": "styrka",
-          "min": 2,
-          "max": 4
-        },
-        {
-          "name": "smidighet",
-          "min": 2,
-          "max": 5
-        },
-        {
-          "name": "intelligens",
-          "min": 2,
-          "max": 3
-        },
-        {
-          "name": "karisma",
-          "min": 2,
+          "name": "mördarens väg",
+          "min": 0,
           "max": 3
         }
       ],
-      "skills": [
+      [
         {
-          "name": "närkamp",
-          "min": 0,
-          "max": 4
-        },
-        {
-          "name": "rörlighet",
-          "min": 0,
-          "max": 4
-        },
-        {
-          "name": "smyga",
-          "min": 0,
-          "max": 5
-        },
-        {
-          "name": "skytte",
-          "min": 0,
-          "max": 5
-        },
-        {
-          "name": "bildning",
+          "name": "bödel",
           "min": 0,
           "max": 2
         },
         {
-          "name": "överlevnad",
+          "name": "hal som en ål",
           "min": 0,
-          "max": 3
+          "max": 2
         },
         {
-          "name": "genomskåda",
+          "name": "giftkokare",
           "min": 0,
-          "max": 4
+          "max": 2
         },
         {
-          "name": "manipulera",
+          "name": "kallblodig",
           "min": 0,
-          "max": 3
-        }
-      ],
-      "talents": [
-        [
-          {
-            "name": "mördarens väg",
-            "min": 0,
-            "max": 3
-          }
-        ],
-        [
-          {
-            "name": "bödel",
-            "min": 0,
-            "max": 2
-          },
-          {
-            "name": "hal som en ål",
-            "min": 0,
-            "max": 2
-          },
-          {
-            "name": "giftkokare",
-            "min": 0,
-            "max": 2
-          },
-          {
-            "name": "kallblodig",
-            "min": 0,
-            "max": 2
-          },
-          {
-            "name": "orädd",
-            "min": 0,
-            "max": 2
-          }
-        ]
-      ],
-      "gear": {
-        "primary_weapon": [
-          {
-            "name": "huggare"
-          },
-          {
-            "name": "kroksabel"
-          },
-          {
-            "name": "bredsvärd"
-          }
-        ],
-        "secondary_weapon": [
-          {},
-          {
-            "name": "kortbåge"
-          },
-          {
-            "name": "lätt armborst"
-          }
-        ],
-        "body": [
-          {},
-          {
-            "name": "läderrustning"
-          },
-          {
-            "name": "nitläderrustning"
-          }
-        ],
-        "other": [
-          {},
-          {
-            "name": "T6 doser dödande gift (giftstyrka 6)"
-          },
-          {
-            "name": "T6 doser förlamande gift (giftstyrka 6)"
-          }
-        ]
-      },
-      "purse": [
-        {
-          "denomination": "silver",
-          "min": 0,
-          "max": 6
+          "max": 2
         },
         {
-          "denomination": "koppar",
+          "name": "orädd",
           "min": 0,
-          "max": 6
+          "max": 2
         }
       ]
-    },  {
+    ],
+    "gear": {
+      "primary_weapon": [
+        {
+          "name": "huggare"
+        },
+        {
+          "name": "kroksabel"
+        },
+        {
+          "name": "bredsvärd"
+        }
+      ],
+      "secondary_weapon": [
+        {},
+        {
+          "name": "kortbåge"
+        },
+        {
+          "name": "lätt armborst"
+        }
+      ],
+      "body": [
+        {},
+        {
+          "name": "läderrustning"
+        },
+        {
+          "name": "nitläderrustning"
+        }
+      ],
+      "other": [
+        {},
+        {
+          "name": "T6 doser dödande gift (giftstyrka 6)"
+        },
+        {
+          "name": "T6 doser förlamande gift (giftstyrka 6)"
+        }
+      ]
+    },
+    "purse": [
+      {
+        "denomination": "silver",
+        "min": 0,
+        "max": 6
+      },
+      {
+        "denomination": "koppar",
+        "min": 0,
+        "max": 6
+      }
+    ]
+  },
+  {
     "name": "rostbroder",
     "kins": [
       "alderlänning"
@@ -1017,7 +1020,7 @@
       },
       {
         "name": "bildning",
-        "min": 0,
+        "min": 1,
         "max": 3
       },
       {
@@ -1029,19 +1032,20 @@
         "name": "läkekonst",
         "min": 0,
         "max": 2
-      }],
+      }
+    ],
     "talents": [
       [
         {
           "name": "dödens väg",
-          "min": 0,
+          "min": 1,
           "max": 3
         },
         {
-        "name": "blodets väg",
-        "min": 0,
-        "max": 3
-      }
+          "name": "blodets väg",
+          "min": 1,
+          "max": 3
+        }
       ],
       [
         {
@@ -1079,8 +1083,7 @@
         {
           "name": "dolk"
         },
-        {
-        }
+        {}
       ],
       "body": [
         {},
@@ -1099,7 +1102,8 @@
         "max": 12
       }
     ]
-  },{
+  },
+  {
     "name": "järngardist",
     "kins": [
       "alderlänning"
@@ -1139,22 +1143,25 @@
       },
       {
         "name": "närkamp",
-        "min": 0,
+        "min": 1,
         "max": 5
       },
       {
         "name": "rörlighet",
         "min": 0,
         "max": 3
-      },{
+      },
+      {
         "name": "skytte",
-        "min": 0,
+        "min": 1,
         "max": 4
-      },{
+      },
+      {
         "name": "speja",
         "min": 0,
         "max": 3
-      }],
+      }
+    ],
     "talents": [
       [
         {
@@ -1199,7 +1206,7 @@
     "gear": {
       "primary_weapon": [
         {
-          "name": "slagssvärd"
+          "name": "slagsvärd"
         },
         {
           "name": "stridsgissel"
@@ -1209,8 +1216,7 @@
         }
       ],
       "secondary_weapon": [
-        {
-        },
+        {},
         {
           "name": "stort armborst"
         }
@@ -1224,8 +1230,7 @@
         }
       ],
       "head": [
-        {
-        },
+        {},
         {
           "name": "öppen hjälm"
         },
@@ -1242,8 +1247,7 @@
         }
       ],
       "mount": [
-        {
-        },
+        {},
         {
           "name": "stridshäst"
         },
@@ -1264,5 +1268,1117 @@
         "max": 12
       }
     ]
-  }
+  },
+  {
+    "name": "hemesyster",
+    "kins": [
+      "alderlänning"
+    ],
+    "attributes": [
+      {
+        "name": "styrka",
+        "min": 2,
+        "max": 3
+      },
+      {
+        "name": "smidighet",
+        "min": 2,
+        "max": 3
+      },
+      {
+        "name": "intelligens",
+        "min": 2,
+        "max": 5
+      },
+      {
+        "name": "karisma",
+        "min": 2,
+        "max": 4
+      }
+    ],
+    "skills": [
+      {
+        "name": "bildning",
+        "min": 1,
+        "max": 3
+      },
+      {
+        "name": "genomskåda",
+        "min": 0,
+        "max": 3
+      },
+      {
+        "name": "läkekonst",
+        "min": 0,
+        "max": 3
+      }
+    ],
+    "talents": [
+      [
+        {
+          "name": "blodets väg",
+          "min": 1,
+          "max": 3
+        },
+        {
+          "name": "dödens väg",
+          "min": 1,
+          "max": 3
+        }
+      ],
+      [
+        {
+          "name": "giftkokare",
+          "min": 0,
+          "max": 2
+        },
+        {
+          "name": "orädd",
+          "min": 0,
+          "max": 2
+        },
+        {
+          "name": "smärttålig",
+          "min": 0,
+          "max": 2
+        },
+        {
+          "name": "kallblodig",
+          "min": 0,
+          "max": 2
+        }
+      ]
+    ],
+    "gear": {
+      "primary_weapon": [
+        {},
+        {
+          "name": "stav"
+        },
+        {
+          "name": "kniv"
+        },
+        {
+          "name": "dolk"
+        }
+      ]
+    },
+    "purse": [
+      {
+        "denomination": "koppar",
+        "min": 0,
+        "max": 12
+      }
+    ]
+  },  {
+  "name": "druid",
+  "kins": [
+    "älvestamling",
+    "alv"
+  ],
+  "attributes": [
+    {
+      "name": "styrka",
+      "min": 2,
+      "max": 3
+    },
+    {
+      "name": "smidighet",
+      "min": 2,
+      "max": 4
+    },
+    {
+      "name": "intelligens",
+      "min": 3,
+      "max": 5
+    },
+    {
+      "name": "karisma",
+      "min": 2,
+      "max": 3
+    }
+  ],
+  "skills": [
+    {
+      "name": "närkamp",
+      "min": 0,
+      "max": 3
+    },
+    {
+      "name": "speja",
+      "min": 0,
+      "max": 3
+    },
+    {
+      "name": "bildning",
+      "min": 0,
+      "max": 4
+    },
+    {
+      "name": "skytte",
+      "min": 0,
+      "max": 3
+    },
+    {
+      "name": "överlevnad",
+      "min": 0,
+      "max": 4
+    },
+    {
+      "name": "läkekonst",
+      "min": 0,
+      "max": 3
+    },
+    {
+      "name": "djurhantering",
+      "min": 0,
+      "max": 4
+    }
+  ],
+  "talents": [
+    [
+      {
+        "name": "helandets väg",
+        "min": 1,
+        "max": 3
+      },
+      {
+        "name": "hamnskiftets väg",
+        "min": 1,
+        "max": 3
+      }
+    ],
+    [
+      {
+        "name": "örtakännare",
+        "min": 0,
+        "max": 2
+      },
+      {
+        "name": "vandrare",
+        "min": 0,
+        "max": 2
+      },
+      {
+        "name": "stigfinnare",
+        "min": 0,
+        "max": 2
+      },{
+      "name": "ögon i nacken",
+      "min": 0,
+      "max": 2
+    }
+    ]
+  ],
+  "gear": {
+    "primary_weapon": [
+      {},
+      {
+        "name": "stav"
+      },
+      {
+        "name": "kniv"
+      },
+      {
+        "name": "dolk"
+      }
+    ]
+  },
+  "purse": [
+    {
+      "denomination": "koppar",
+      "min": 0,
+      "max": 6
+    }
   ]
+},  {
+  "name": "bard",
+  "kins": [
+    "älvestamling",
+    "alv",
+    "halvling",
+    "alderlänning",
+    "aslen",
+    "kromb"
+  ],
+  "attributes": [
+    {
+      "name": "styrka",
+      "min": 2,
+      "max": 3
+    },
+    {
+      "name": "smidighet",
+      "min": 2,
+      "max": 3
+    },
+    {
+      "name": "intelligens",
+      "min": 2,
+      "max": 3
+    },
+    {
+      "name": "karisma",
+      "min": 3,
+      "max": 6
+    }
+  ],
+  "skills": [
+    {
+      "name": "fingerfärdighet",
+      "min": 0,
+      "max": 2
+    },
+    {
+      "name": "rörlighet",
+      "min": 0,
+      "max": 2
+    },
+    {
+      "name": "bildning",
+      "min": 0,
+      "max": 2
+    },
+    {
+      "name": "genomskåda",
+      "min": 0,
+      "max": 2
+    },
+    {
+      "name": "manipulera",
+      "min": 0,
+      "max": 2
+    },
+    {
+      "name": "skaldekonst",
+      "min": 0,
+      "max": 4
+    }
+  ],
+  "talents": [
+    [
+      {
+        "name": "hymnens väg",
+        "min": 0,
+        "max": 3
+      },
+      {
+        "name": "stämmans väg",
+        "min": 0,
+        "max": 3
+      },{
+        "name": "ansiktets väg",
+        "min": 0,
+        "max": 3
+      }
+    ],
+    [
+      {
+        "name": "blixtsnabb",
+        "min": 0,
+        "max": 2
+      },
+      {
+        "name": "vandrare",
+        "min": 0,
+        "max": 2
+      },
+      {
+        "name": "tursam",
+        "min": 0,
+        "max": 3
+      }
+    ]
+  ],
+  "gear": {
+    "primary_weapon": [
+      {},
+      {
+        "name": "kniv"
+      },
+      {
+        "name": "dolk"
+      }
+    ],
+    "other": [
+      {"name": "luta"},
+      {"name": "flöjt"},
+      {"name": "mungiga"},
+      {"name": "trumma"}
+    ]
+  },
+  "purse": [
+    {
+      "denomination": "silver",
+      "min": 0,
+      "max": 6
+    },
+    {
+      "denomination": "koppar",
+      "min": 0,
+      "max": 20
+    }
+  ]
+},
+  {
+    "name": "nasare",
+    "kins": [
+      "alderlänning",
+      "aslen",
+      "halvling",
+      "kromb",
+      "belderann",
+      "klener"
+    ],
+    "attributes": [
+      {
+        "name": "styrka",
+        "min": 2,
+        "max": 3
+      },
+      {
+        "name": "smidighet",
+        "min": 2,
+        "max": 3
+      },
+      {
+        "name": "intelligens",
+        "min": 2,
+        "max": 3
+      },
+      {
+        "name": "karisma",
+        "min": 3,
+        "max": 6
+      }
+    ],
+    "skills": [
+      {
+        "name": "hantverk",
+        "min": 0,
+        "max": 3
+      },
+      {
+        "name": "bildning",
+        "min": 0,
+        "max": 2
+      },
+      {
+        "name": "genomskåda",
+        "min": 0,
+        "max": 3
+      },
+      {
+        "name": "manipulera",
+        "min": 0,
+        "max": 3
+      }
+    ],
+    "talents": [
+      [
+        {
+          "name": "guldets väg",
+          "min": 0,
+          "max": 3
+        },
+        {
+          "name": "kappsäckens väg",
+          "min": 0,
+          "max": 3
+        },
+        {
+          "name": "lögnens väg",
+          "min": 0,
+          "max": 3
+        }
+      ],
+      [
+        {
+          "name": "garvare",
+          "min": 0,
+          "max": 3
+        },
+        {
+          "name": "smed",
+          "min": 0,
+          "max": 3
+        },
+        {
+          "name": "skräddare",
+          "min": 0,
+          "max": 3
+        },
+        {
+          "name": "kock",
+          "min": 0,
+          "max": 3
+        },
+        {
+          "name": "omutlig",
+          "min": 0,
+          "max": 3
+        },
+        {
+          "name": "tursam",
+          "min": 0,
+          "max": 3
+        }
+      ]
+    ],
+    "gear": {
+      "primary_weapon": [
+        {},
+        {
+          "name": "kortsvärd"
+        },
+        {
+          "name": "dolk"
+        }
+      ],
+      "other": [
+        {},
+        {"name": "halsband av guld"},
+        {"name": "guldring"},
+        {"name": "silverring"},
+        {"name": "halsband av silver"},
+        {"name": "silverkam"},
+        {"name": "rep"},
+        {"name": "örhänge av silver"},
+        {"name": "fin hatt"},
+        {"name": "flaska dyrbart vin"},
+        {"name": "silverspänne"},
+        {"name": "guldspänne"},
+        {"name": "silverspegel"},
+        {"name": "fin medaljong"},
+        {"name": "huvudring av silver"},
+        {"name": "huvudring av guld"}
+      ]
+    },
+    "purse": [
+      {
+        "denomination": "silver",
+        "min": 0,
+        "max": 15
+      },
+      {
+        "denomination": "koppar",
+        "min": 0,
+        "max": 10
+      }
+    ]
+  },{
+  "name": "dödsmagiker",
+  "kins": [
+    "alderlänning",
+    "klener",
+    "orch"
+  ],
+  "attributes": [
+    {
+      "name": "styrka",
+      "min": 2,
+      "max": 3
+    },
+    {
+      "name": "smidighet",
+      "min": 2,
+      "max": 3
+    },
+    {
+      "name": "intelligens",
+      "min": 2,
+      "max": 5
+    },
+    {
+      "name": "karisma",
+      "min": 3,
+      "max": 4
+    }
+  ],
+  "skills": [
+    {
+      "name": "hantverk",
+      "min": 0,
+      "max": 3
+    },
+    {
+      "name": "bildning",
+      "min": 1,
+      "max": 5
+    },
+    {
+      "name": "genomskåda",
+      "min": 0,
+      "max": 3
+    },
+    {
+      "name": "manipulera",
+      "min": 1,
+      "max": 3
+    },
+    {
+      "name": "läkekonst",
+      "min": 0,
+      "max": 2
+    }
+  ],
+  "talents": [
+    [
+      {
+        "name": "dödens väg",
+        "min": 1,
+        "max": 3
+      }
+    ],
+    [
+      {
+        "name": "blodets väg",
+        "min": 0,
+        "max": 2
+      }
+    ],
+    [
+      {
+        "name": "giftkokare",
+        "min": 0,
+        "max": 3
+      },
+      {
+        "name": "orädd",
+        "min": 0,
+        "max": 3
+      }
+    ]
+  ],
+  "gear": {
+    "primary_weapon": [
+      {},
+      {
+        "name": "stav"
+      }
+    ],
+    "secondary_weapon": [
+      {},
+      {
+        "name": "dolk"
+      },
+      {
+        "name": "kortsvärd"
+      }
+    ],
+    "other": [
+      {},
+      {"name": "formelsamling"},
+      {"name": "skelettdelar"},
+      {"name": "fin hatt"},
+      {"name": "T6 doser dödande gift (giftstyrka 6)"},
+      {"name": "pergamentrulle"},
+      {"name": "rutten matbit"},
+      {"name": "kristall"},
+      {"name": "avhuggen hand"},
+      {"name": "dödskalle"},
+      {"name": "skalp av vitt hår"},
+      {"name": "död fågel"}
+    ]
+  },
+  "purse": [
+    {
+      "denomination": "silver",
+      "min": 0,
+      "max": 8
+    },
+    {
+      "denomination": "koppar",
+      "min": 0,
+      "max": 10
+    }
+  ]
+},
+  {
+    "name": "siare",
+    "kins": [
+      "alderlänning",
+      "alv",
+      "älvestamling",
+      "eländer"
+    ],
+    "attributes": [
+      {
+        "name": "styrka",
+        "min": 2,
+        "max": 3
+      },
+      {
+        "name": "smidighet",
+        "min": 2,
+        "max": 3
+      },
+      {
+        "name": "intelligens",
+        "min": 2,
+        "max": 5
+      },
+      {
+        "name": "karisma",
+        "min": 3,
+        "max": 4
+      }
+    ],
+    "skills": [
+      {
+        "name": "bildning",
+        "min": 0,
+        "max": 5
+      },
+      {
+        "name": "genomskåda",
+        "min": 1,
+        "max": 5
+      },
+      {
+        "name": "läkekonst",
+        "min": 1,
+        "max": 3
+      }
+    ],
+    "talents": [
+      [
+        {
+          "name": "synens väg",
+          "min": 1,
+          "max": 3
+        }
+      ],
+      [
+        {
+          "name": "tecknets väg",
+          "min": 0,
+          "max": 2
+        }
+      ],
+      [
+        {
+          "name": "örtakännare",
+          "min": 0,
+          "max": 3
+        },
+        {
+          "name": "ögon i nacken",
+          "min": 0,
+          "max": 3
+        }
+      ]
+    ],
+    "gear": {
+      "primary_weapon": [
+        {},
+        {
+          "name": "stav"
+        }
+      ],
+      "secondary_weapon": [
+        {},
+        {
+          "name": "dolk"
+        }
+      ],
+      "other": [
+        {},
+        {"name": "formelsamling"},
+        {"name": "orakelben"},
+        {"name": "örtsamling"},
+        {"name": "spåkula"},
+        {"name": "fiskrens"},
+        {"name": "våg"},
+        {"name": "förstoringsglas"},
+        {"name": "snäcka"},
+        {"name": "tratt"}
+      ]
+    },
+    "purse": [
+      {
+        "denomination": "koppar",
+        "min": 0,
+        "max": 10
+      }
+    ]
+  },
+  {
+    "name": "magiker",
+    "kins": [
+      "alderlänning",
+      "alv",
+      "älvestamling",
+      "eländer",
+      "belderann",
+      "kromb"
+    ],
+    "attributes": [
+      {
+        "name": "styrka",
+        "min": 2,
+        "max": 3
+      },
+      {
+        "name": "smidighet",
+        "min": 2,
+        "max": 3
+      },
+      {
+        "name": "intelligens",
+        "min": 2,
+        "max": 5
+      },
+      {
+        "name": "karisma",
+        "min": 3,
+        "max": 4
+      }
+    ],
+    "skills": [
+      {
+        "name": "hantverk",
+        "min": 0,
+        "max": 3
+      },
+      {
+        "name": "bildning",
+        "min": 1,
+        "max": 5
+      },
+      {
+        "name": "manipulera",
+        "min": 0,
+        "max": 3
+      },
+      {
+        "name": "läkekonst",
+        "min": 0,
+        "max": 3
+      }
+    ],
+    "talents": [
+      [
+        {
+          "name": "tecknets väg",
+          "min": 1,
+          "max": 3
+        }
+      ],
+      [
+        {},
+        {
+          "name": "stenens väg",
+          "min": 0,
+          "max": 2
+        }
+      ],
+      [
+        {
+          "name": "orädd",
+          "min": 0,
+          "max": 3
+        }
+      ]
+    ],
+    "gear": {
+      "primary_weapon": [
+        {},
+        {
+          "name": "stav"
+        }
+      ],
+      "secondary_weapon": [
+        {},
+        {
+          "name": "dolk"
+        },
+        {
+          "name": "kortsvärd"
+        }
+      ],
+      "other": [
+        {},
+        {"name": "formelsamling"}
+      ]
+    },
+    "purse": [
+      {
+        "denomination": "koppar",
+        "min": 0,
+        "max": 10
+      }
+    ]
+  }
+,{
+  "name": "stensångare",
+  "kins": [
+    "belderann"
+  ],
+  "attributes": [
+    {
+      "name": "styrka",
+      "min": 2,
+      "max": 4
+    },
+    {
+      "name": "smidighet",
+      "min": 2,
+      "max": 3
+    },
+    {
+      "name": "intelligens",
+      "min": 2,
+      "max": 4
+    },
+    {
+      "name": "karisma",
+      "min": 3,
+      "max": 4
+    }
+  ],
+  "skills": [
+    {
+      "name": "styrkeprov",
+      "min": 0,
+      "max": 2
+    },
+    {
+      "name": "närkamp",
+      "min": 0,
+      "max": 2
+    },
+    {
+      "name": "hantverk",
+      "min": 0,
+      "max": 3
+    },
+    {
+      "name": "bildning",
+      "min": 0,
+      "max": 3
+    }
+  ],
+  "talents": [
+    [
+      {
+        "name": "stenens väg",
+        "min": 1,
+        "max": 3
+      }
+    ],
+    [
+      {
+        "name": "smed",
+        "min": 0,
+        "max": 3
+      }
+    ]
+  ],
+  "gear": {
+    "primary_weapon": [
+      {},
+      {
+        "name": "stridshammare"
+      },
+      {
+        "name": "stav"
+      },
+      {
+        "name": "tung stridshammare"
+      }
+    ],
+    "secondary_weapon": [
+      {},
+      {
+        "name": "dolk"
+      }
+    ],
+    "body": [
+      {},
+      {
+        "name": "ringbrynja"
+      }
+    ],
+    "head": [
+      {},
+      {
+        "name": "öppen hjälm"
+      }
+    ],
+    "off_hand": [
+      {},
+      {
+        "name": "liten sköld"
+      }
+    ],
+    "other": [
+      {},
+      {"name": "formelsamling"},
+      {"name": "småsten"},
+      {"name": "blåshorn"},
+      {"name": "flöjt"},
+      {"name": "lyra"},
+      {"name": "harpa"},
+      {"name": "hammare"},
+      {"name": "figurin av sten"},
+      {"name": "trumma"}
+    ]
+  },
+  "purse": [
+    {
+      "denomination": "silver",
+      "min": 0,
+      "max": 6
+    },
+    {
+      "denomination": "koppar",
+      "min": 0,
+      "max": 10
+    }
+  ]
+},
+  {
+    "name": "kock",
+    "kins": [
+      "belderann",
+      "kromb",
+      "kanid",
+      "orch",
+      "halvling",
+      "klener",
+      "alderlänning",
+      "eländer",
+      "älvestamling",
+      "aslen",
+      "meromann"
+    ],
+    "attributes": [
+      {
+        "name": "styrka",
+        "min": 2,
+        "max": 4
+      },
+      {
+        "name": "smidighet",
+        "min": 2,
+        "max": 4
+      },
+      {
+        "name": "intelligens",
+        "min": 2,
+        "max": 3
+      },
+      {
+        "name": "karisma",
+        "min": 3,
+        "max": 4
+      }
+    ],
+    "skills": [
+      {
+        "name": "hantverk",
+        "min": 0,
+        "max": 2
+      },
+      {
+        "name": "överlevnad",
+        "min": 0,
+        "max": 3
+      },
+      {
+        "name": "läkekonst",
+        "min": 0,
+        "max": 2
+      },
+      {
+        "name": "djurhantering",
+        "min": 0,
+        "max": 3
+      }
+    ],
+    "talents": [
+      [
+        {
+          "name": "kock",
+          "min": 1,
+          "max": 3
+        }
+      ],
+      [
+        {
+          "name": "byggare",
+          "min": 0,
+          "max": 3
+        },
+        {
+          "name": "jaktmästare",
+          "min": 0,
+          "max": 3
+        },
+        {
+          "name": "fiskare",
+          "min": 0,
+          "max": 3
+        },
+        {
+          "name": "kvartermästare",
+          "min": 0,
+          "max": 3
+        }
+      ]
+    ],
+    "gear": {
+      "primary_weapon": [
+        {},
+        {
+          "name": "handyxa"
+        }
+      ],
+      "secondary_weapon": [
+        {
+          "name": "dolk"
+        },
+        {
+          "name": "kniv"
+        }
+      ],
+      "tools": [
+        {"name": "kokkärl"}
+      ],
+      "other": [
+        {},
+        {"name": "fiskkrok och lina"},
+        {"name": "fisknät"},
+        {"name": "T6 tallrikar i metall"},
+        {"name": "matkniv"},
+        {"name": "silverbestick värda T6 silver"},
+        {"name": "fisknät"},
+        {"name": "T6 sejdlar"},
+        {"name": "T6 vinkalkar"}
+      ],
+      "food": [
+        {},
+        {"name": "T6 mat"},
+        {"name": "T8 mat"},
+        {"name": "T10 mat"},
+        {"name": "T12 mat"}
+      ]
+    },
+    "purse": [
+      {
+        "denomination": "silver",
+        "min": 0,
+        "max": 6
+      },
+      {
+        "denomination": "koppar",
+        "min": 0,
+        "max": 10
+      }
+    ]
+  }
+
+
+
+]
