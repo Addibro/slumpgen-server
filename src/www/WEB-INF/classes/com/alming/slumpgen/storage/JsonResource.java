@@ -30,6 +30,7 @@ public class JsonResource implements Resource<String> {
         response.setContentType("application/json;charset=" + UTF_8.name());
         PrintWriter out = response.getWriter();
         out.append(this.getResource());
+        out.close();
     }
 
     @Override
