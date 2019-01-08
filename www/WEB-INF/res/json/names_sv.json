@@ -1,0 +1,77 @@
+[
+    {
+        "kins": ["alderlänning", "klener", "eländer"],
+        "prefix": ["esg", "p", "j", "pyr", "ter", "k", "fer", "d", "dyn",
+            "m", "h", "per", "st", "olm", "or", "n", "v", "gr", "beid",
+            "t", "ald", "urs", "dus", "nep", "art", "m", "alg", "k", "mag", "tr",
+            "mar", "est", "r", "rob", "mand", "grot", "bald", "g", "b", "kn", "sv", "par"],
+        "infix": ["a", "o", "e", "i", "u", "ä"],
+        "suffix": ["n", "r", "l", "nax", "malda", "mar", "bald", "lb", "rb", "rkas",
+            "lkas", "dor", "ss", "ke", "mla", "lme", "la", "k", "rv", "tur",
+            "red", "vard", "dan", "rod", "torda", "mbredo", "llmor", "rd", "ga",
+            "rel", "rga", "rga", "vla", "rna", "torna", "nsmyra"]
+    },{
+        "kins": ["aslen"],
+        "prefix": ["kalm", "arn", "vid", "mir", "sk", "pal",
+            "ag", "g", "s", "vis", "rob", "garm", "th", "fr", "ol", "or",
+            "gr", "agr", "arg", "arm", "ern", "harm", "hest", "sn"],
+        "infix": ["a", "u", "e", "i", "y"],
+        "suffix": ["x", "lf", "vall", "knolt", "nsa", "dia", "tharm", "lia",
+            "kus", "r", "v", "rval", "ria", "n", "mling", "den", "nn",
+            "kuse", "nna", "nne", "gurd", "gard", "mard", "mord", "red",
+            "rik", "no", "na", "thurm", "rm", "nex", "lx", "l", "ll"]
+    },{
+        "kins": ["eländer"],
+        "prefix": ["", "n", "s", "er", "em", "t", "v", "m", "am", "an", "h"],
+        "infix": ["e", "i", "o", "a"],
+        "suffix": ["rvea", "nja", "rna", "rnia", "ckla", "nder", "nders", "nrik"]
+    },{
+        "kins": ["klener", "älvestamling", "alv"],
+        "prefix": ["bl", "s", "er", "em", "t", "v", "hiv", "kor", "son", "tr",
+            "sand", "gav", "gal", "j", "hord", "leg", "x", "", "vir", "q"],
+        "infix": ["e", "i", "o", "a"],
+        "suffix": ["nella", "mi", "na", "llia", "lia", "mellia", "lia", "va",
+            "rin", "van", "ran", "man", "rme", "las", "rox", "ven", "rven", "dia"]
+    },{
+        "kins": ["halvling", "svartalf"],
+        "prefix": ["fr", "b", "s", "m", "h", "g", "gr", "t", "l", "p", "ab", "am", "art", ""],
+        "infix": ["o", "i", "a"],
+        "suffix": ["do", "bo", "lle", "mvis", "lger", "ppe", "lf", "ls", "mynta", "lvis", "nvis",
+            "tte", "sse", "bbe", "sson", "lker", "ssa", "ssel", "llo", "ppel"]
+    },{
+    "kins": ["dvärg"],
+    "prefix": ["h", "sk", "t", "tr", "b", "g", "w", "k", "m", "d", "dv", "yw", "st", "str",
+        "gl", "kl", "kr", "", "d", "l", "v", "kl", "kv"],
+    "infix": ["a", "i", "o", "u", "ô"],
+    "suffix": ["mhelda", "lleva", "rinda", "rbenia", "ndi", "dlo", "ndeman", "rgamar", "rgar",
+        "lfred", "mli", "ls", "grim", "rgrim", "n", "m", "mi", "ni", "rvald", "ldo", "bane", "lf",
+        "vid", "dvig", "rm", "rmhal", "mb", "mbe", "ns", "lls", "ll", "gverk", "ld",
+        "nn", "dron", "nt", "nte", "nvald", "rmb", "rk", "mk", "man", "rman", "rkant"]
+    },{
+    "kins": ["orch"],
+    "prefix": ["", "g", "h", "ok", "sh", "s", "hr", "kr", "k", "sm", "m"],
+    "infix": ["e", "i", "a", "o"],
+    "suffix": ["rina", "ria", "nde", "la", "gga", "rcha", "l-gara", "l-gora", "ssa",
+        "-gora", "gorra", "-kragga", "cha", "khan", "nga", "d", "l-dan", "l-dork",
+        "l-dark", "r-makka", "-hakka", "hakka", "kka", "mash", "lla", "l-kroga", "rga",
+        "-krega", "l-krega", "r-krega", "m-shagga", "m-agga", "magga", "lagga",
+        "tagga", "targa", "l-targa"]
+    },{
+        "kins": ["svartalf"],
+        "prefix": ["h", "s", "tj", "g", "gr", "h", "n", "p", "pr", "gn", "m"],
+        "infix": ["a", "u", "å", "ä"],
+        "suffix": ["rgia", "rmer", "lga", "meria", "lia", "tula", "ssel", "ms",
+            "lepära", "mdan", "sse", "ssa", "lle", "ll", "gga"]
+    },{
+    "kins": ["vargfolk"],
+    "prefix": ["ala", "ei", "gae", "au", "ja", "ke", "naa", "a", "e", "ae", "kae", "kaa",
+        "sia", "shina", "shoo", "sho", "shou", "shau", "shaa", "naa", "waa", "wau",
+        "a", "woo", "wao", "waku", "woku", "ree", "raa", "khaa", "khau", "rau",
+        "arau", "awau", "awao", "ashaa", "asho", "esho", "ara", "aroo", "aro", "waro", "waroo",
+        "wara", "akhaa", "akha", "arau", "arra", "ao", "o", "oo", "ru", "ro", "ra", "rao",
+        "aru", "aro", "ara", "arao"],
+    "infix": [""],
+    "suffix": ["ni", "nia", "ta", "wa", "gini", "hone", "bari", "ko", "koa", "mbari", "f", "wie",
+        "wick", "sona", "na", "ni", "winne", "wynne", "llo", "ffa"]
+    }
+]

@@ -1,3 +1,2 @@
 #!/bin/bash
-
-cd src/ && ./build_servlet.sh && ./run_servlet.sh
+./build_servlet.sh && ./make_jar.sh && ./run_servlet.sh
