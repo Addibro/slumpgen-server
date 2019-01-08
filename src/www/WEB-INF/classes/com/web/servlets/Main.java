@@ -50,7 +50,6 @@ public class Main extends HttpServlet {
         // Check and parse querystring 
         try {
             Map<String, Query> queries = QueryParser.parse(querystring);
-            System.out.println(queries);
             Resource resource = Resources.getResource(queries);
             resource.setResponse(response, context);
         } catch (IllegalArgumentException ex) {
@@ -62,33 +61,6 @@ public class Main extends HttpServlet {
         } catch (Exception ex) {
             System.out.println(ex);
             response.setStatus(HttpServletResponse.SC_INTERNAL_SERVER_ERROR);
-        }
-    }
-
-    @Override
-    public void doPost(HttpServletRequest request, HttpServletResponse response) 
-        throws ServletException, IOException {
-        System.out.println("RequestURL(): " + request.getRequestURI());
-        System.out.println("Method type: " + request.getMethod());
-
-        // System.out.println(request.getIntHeader(""));
-        // Get character posted
-        String json = request.getReader()
-            .lines()
-            .collect(Collectors.toList())
-            .toString();
-        FBLCharacterJsonParser parser = new FBLCharacterJsonParser();
-        
-        System.out.println("json: " + json);
-
-        try {
-            List<FBLCharacter> character = parser.parse(json);
-            System.out.println(character);
-            
-
-        } catch (Exception ex) {
-            response.setStatus(HttpServletResponse.SC_NOT_FOUND);
-            System.out.println(ex);
         }
     }
 }
