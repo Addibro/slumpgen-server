@@ -10,9 +10,6 @@ import java.util.Optional;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-
-import com.web.http.Query;
-
 /**
  *  //TODO
  */
@@ -20,16 +17,10 @@ public class QueryParser {
 
     private QueryParser() {}
 
-    public static Map<String, Query> parse(String querystring) throws IllegalArgumentException {
+    public static Map<String, String> parse(String querystring) throws IllegalArgumentException {
         if (!querystring.matches("^type=[^=]+&res=[^=]+")) throw new IllegalArgumentException("Illegal argument(s) in query");
-        Map<String, Query> queries = Arrays.stream(querystring.split("&"))
-            .map(s -> new Query(s.split("=")[0], s.split("=")[1]))
-            .filter(valueNotNullOrEmpty())
-            .collect(Collectors.toMap(k -> k.getKey(), v -> v));
+        Map<String, String> queries = Arrays.stream(querystring.split("&"))
+            .collect(Collectors.toMap(k -> k.split("=")[0], v -> v.split("=")[1]));
         return queries;
-    }
-
-    private static Predicate<Query> valueNotNullOrEmpty() {
-        return query -> query.getValue() != null && !query.getValue().isEmpty();
     }
 }

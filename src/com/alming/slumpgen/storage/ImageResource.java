@@ -3,6 +3,7 @@ package com.alming.slumpgen.storage;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 
@@ -19,7 +20,7 @@ public class ImageResource implements Resource<Path> {
     }
 
     @Override
-    public void setResponse(HttpServletResponse response, ServletContext context) throws IllegalArgumentException, FileNotFoundException, IOException{
+    public void setResponse(HttpServletResponse response, ServletContext context) throws IllegalArgumentException, NoSuchFileException, IOException{
         Path resource = getResource();
         String type = context.getMimeType(resource.toString());
         response.setHeader("Content-Type", context.getMimeType(resource.toFile().getName()));
@@ -28,7 +29,7 @@ public class ImageResource implements Resource<Path> {
     }
 
     @Override
-    public Path getResource() throws IllegalArgumentException, FileNotFoundException, IOException {
+    public Path getResource() throws IllegalArgumentException, NoSuchFileException, IOException {
         System.out.println(this.res);
         return Paths.get(PATH + this.res);
     }

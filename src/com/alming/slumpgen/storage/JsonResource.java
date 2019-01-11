@@ -2,6 +2,10 @@ package com.alming.slumpgen.storage;
 
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -38,10 +42,7 @@ public class JsonResource implements Resource<String> {
         return read(PATH + this.res);
     }
 
-    private String read(String res) throws FileNotFoundException {
-        return new BufferedReader(new FileReader(res))
-            .lines()
-            .collect(Collectors.joining())
-            .toString();
+    private String read(String res) throws NoSuchFileException, IOException {
+        return new String(Files.readAllBytes(Paths.get(res)), UTF_8.name());
     }
 }
