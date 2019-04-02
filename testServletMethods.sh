@@ -2,7 +2,7 @@
 
 if [[ $# -ne 2 ]]
 then
-    echo "usage: testServletMethods [json] [names/nicknames/creeds]"
+    echo "usage: testServletMethods [json] [names/nicknames/creeds]_[sv/en].json"
     exit 1
 fi
 TYPE=$1

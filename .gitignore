@@ -12,3 +12,6 @@ servlet.log
 
 # db
 *.sql
+
+# jars
+*.jar
