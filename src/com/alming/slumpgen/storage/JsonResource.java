@@ -30,7 +30,6 @@ public class JsonResource implements Resource<String> {
     @Override
     public void setResponse(HttpServletResponse response, ServletContext context) 
         throws IllegalArgumentException, FileNotFoundException, IOException {
-        // Set content type 
         response.setContentType("application/json;charset=" + UTF_8.name());
         PrintWriter out = response.getWriter();
         out.append(this.getResource());
