@@ -11,9 +11,6 @@ import java.util.function.Function;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-/**
- * //TODO
- */
 public class QueryParser {
 
     private static Function<String, String> key = keyString -> keyString.split("=")[0];
